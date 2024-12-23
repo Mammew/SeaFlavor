@@ -1,0 +1,130 @@
+/* Generale */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    background-color: #f0f8ff;
+    color: #004d61;
+    line-height: 1.6;
+  }
+  
+  /* Header */
+  header {
+    background-color: #1a73e8;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  header #titolo {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  header #paragrafi {
+    font-size: 20px;
+    font-weight: normal;
+  }
+  
+  /* Navbar */
+  nav#navbar {
+    background-color: #004d61;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  nav#navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+    transition: color 0.3s;
+  }
+  
+  nav#navbar a:hover {
+    color: #f0f8ff;
+  }
+  
+  /* Form Logout */
+  form {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  form #logout {
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  form #logout:hover {
+    background-color: #004d61;
+  }
+  
+  /* Aside */
+  aside#right-side {
+    background-color: #eaf6f6;
+    padding: 15px;
+    border-left: 5px solid #004d61;
+    margin: 20px;
+  }
+  
+  aside#right-side p {
+    font-size: 14px;
+  }
+  
+  /* Section */
+  section#section {
+    text-align: center;
+    margin: 20px;
+  }
+  
+  section #sottotitolo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  section #image {
+    border: 5px solid #004d61;
+    border-radius: 10px;
+  }
+  
+  /* Article */
+  article {
+    margin: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #dadce0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  article .paragrafi {
+    margin-bottom: 15px;
+    color: #004d61;
+    font-size: 16px;
+  }
+  
+  /* Footer */
+  footer#footer {
+    background-color: #004d61;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+  }
+  
+  #logo{
+    max-width: 150px;
+    height: auto;
+  }
