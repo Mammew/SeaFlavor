@@ -1,9 +1,9 @@
 <?php
-    ini_set('display_errors', false);
-    ini_set('error_log', 'file.log');
+    //ini_set('display_errors', false);
+    //ini_set('error_log', 'file.log');
     include "createCookie.php";
     
-    if (isset($_POST["email_field"]) && isset($_POST["password_field"]) && isset($_POST["remember_field"])) {
+    if (isset($_POST["email"]) && isset($_POST["password"]) && isset($_POST["remember_me"])) {
         $conn = new mysqli('localhost', 'root', '', 'prova_DB');
         if (!$conn) {
             echo "Impossible to connect to DB...";
@@ -13,7 +13,7 @@
             function genToken(){
                 return bin2hex(random_bytes(16));
             }
-            $email = mysqli_real_escape_string($conn, $_POST["email_field"]);
+            $email = mysqli_real_escape_string($conn, $_POST["email"]);
             $cookieValue = genToken();
             $timestamp = time()+60;
             if (!createCookie($email,$cookieValue,$timestamp,$conn)) {
@@ -23,15 +23,15 @@
             header("Location: home.php");
         }
     }
-    elseif (isset($_POST["email_field"]) && isset($_POST["password_field"]) && !isset($_POST["remember_field"])) {
+    elseif (isset($_POST["email"]) && isset($_POST["password"]) && !isset($_POST["remember_me"])) {
         $conn = new mysqli('localhost', 'root', '', 'prova_DB');
         if (!$conn) {
             echo "Impossible to connect to DB...";
         }
         else {
             
-            $email = $_POST["email_field"];
-            $password = $_POST["password_field"];
+            $email = $_POST["email"];
+            $password = $_POST["password"];
             
             //controllo la validita della mail
             if(!filter_var($email, FILTER_VALIDATE_EMAIL))
@@ -73,7 +73,7 @@
                     exit();
                 }
                 session_start();
-                $_SESSION["email_field"] = $_POST["email_field"];
+                $_SESSION["email"] = $_POST["email"];
                 $conn->close();
                 header("Location: home.php");
             }

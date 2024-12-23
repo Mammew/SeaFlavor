@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f2;
+}
+
+.form-container, .reg{
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Ombra per dare l'effetto "contenitore" */
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.form h2 {
+  font-size: 24px;
+  color: #202124;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #dadce0;
+  border-radius: 4px;
+  outline: none;
+  background-color: #f8f9fa;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.input-group input:focus {
+  background-color: white;
+  border-color: #1a73e8;
+}
+
+.input-group label {
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  color: #80868b;
+  font-size: 16px;
+  transition: 0.2s;
+  pointer-events: none;
+}
+
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label {
+  top: -12px;
+  left: 10px;
+  font-size: 12px;
+  color: #1a73e8;
+  background-color: white;
+  padding: 0 5px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #185abc;
+}
+
+.err-message{
+  color:red;
+  font-size: small;
+  text-align: left;
+}

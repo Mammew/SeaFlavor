@@ -1,11 +1,11 @@
 <?php
-    if (isset($_POST["email_field"])) {
-        $conn = new mysqli('localhost', 'root', '', 'prova_DB');
+    if (isset($_POST["email"])) {
+        $conn = new mysqli('localhost', 'root', '', 'primoDB');
         if (!$conn) {
             echo "Impossible to connect to DB...";
         }
         else {
-            $email = $_POST["email_field"];
+            $email = $_POST["email"];
             if(!filter_var($email, FILTER_VALIDATE_EMAIL))
             {
                 $conn->close();
@@ -13,7 +13,7 @@
             }
 
             try {
-                $stmt = $conn->prepare("SELECT email FROM user WHERE email = ?");
+                $stmt = $conn->prepare("SELECT email FROM utenti WHERE email = ?");
             } catch (mysqli_sql_exception $e) {
                 error_log("Prepared failed: (" . $e . ")");
                 echo "Query error...";

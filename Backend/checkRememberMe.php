@@ -1,6 +1,6 @@
 <?php
     session_start();
-    if (!isset($_SESSION["email_field"])) {
+    if (!isset($_SESSION["email"])) {
         if(isset($_COOKIE["rememberMe"])){
             $conn = new mysqli('localhost', 'root', '', 'prova_DB');
             if (!$conn) {
@@ -45,7 +45,7 @@
                 exit();
             }
 
-            $_SESSION["email_field"] = $array_result["email"];
+            $_SESSION["email"] = $array_result["email"];
         }
         else{
             session_destroy();

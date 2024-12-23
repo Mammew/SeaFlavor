@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eaf6f6; /* Colore di sfondo simile all'oceano */
+  }
+  
+  .form-container, .reg {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Effetto ombra */
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  .form h2 {
+    font-size: 24px;
+    color: #004d61; /* Blu scuro per il titolo */
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  .input-group {
+    position: relative;
+    margin-bottom: 30px;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #b0dfe5; /* Colore del bordo */
+    border-radius: 4px;
+    outline: none;
+    background-color: #f2fcfc; /* Leggera tonalità di blu */
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+  
+  .input-group input:focus {
+    background-color: white;
+    border-color: #004d61;
+  }
+  
+  .input-group label {
+    position: absolute;
+    top: 10px;
+    left: 12px;
+    color: #6c757d; /* Grigio per il placeholder */
+    font-size: 16px;
+    transition: 0.2s;
+    pointer-events: none;
+  }
+  
+  .input-group input:focus + label,
+  .input-group input:not(:placeholder-shown) + label {
+    top: -12px;
+    left: 10px;
+    font-size: 12px;
+    color: #004d61;
+    background-color: white;
+    padding: 0 5px;
+  }
+  
+  button {
+    width: 100%;
+    padding: 12px;
+    background-color: #1a73e8; /* Blu acceso per i pulsanti */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #155a9d; /* Blu più scuro */
+  }
+  
+  .err-message {
+    color: red;
+    font-size: small;
+    text-align: left;
+  }
+  
+  /* Specific styles for SeaFlavour branding */
+  .form-container::before {
+    content: 'SeaFlavour';
+    display: block;
+    font-size: 28px;
+    color: #004d61;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    background-color: #004d61; /* Tema blu scuro marino */
+  }
+  
+  button:hover {
+    background-color: #006d78; /* Blu leggermente più chiaro */
+  }
