@@ -2,7 +2,7 @@
     session_start();
     if (!isset($_SESSION["email_field"])) {
         if(isset($_COOKIE["rememberMe"])){
-            $conn = new mysqli('localhost', 'Samuele', 'samueleilgrande', 'prova_DB');
+            $conn = new mysqli('localhost', 'root', '', 'prova_DB');
             if (!$conn) {
                 echo "Impossible to connect to DB...";
             }

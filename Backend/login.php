@@ -4,7 +4,7 @@
     include "createCookie.php";
     
     if (isset($_POST["email_field"]) && isset($_POST["password_field"]) && isset($_POST["remember_field"])) {
-        $conn = new mysqli('localhost', 'Samuele', 'samueleilgrande', 'prova_DB');
+        $conn = new mysqli('localhost', 'root', '', 'prova_DB');
         if (!$conn) {
             echo "Impossible to connect to DB...";
         }
@@ -24,7 +24,7 @@
         }
     }
     elseif (isset($_POST["email_field"]) && isset($_POST["password_field"]) && !isset($_POST["remember_field"])) {
-        $conn = new mysqli('localhost', 'Samuele', 'samueleilgrande', 'prova_DB');
+        $conn = new mysqli('localhost', 'root', '', 'prova_DB');
         if (!$conn) {
             echo "Impossible to connect to DB...";
         }
