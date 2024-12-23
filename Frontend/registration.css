@@ -1,0 +1,89 @@
+/* Reset base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Corpo della pagina */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f1f1; /* Colore di sfondo chiaro e neutro */
+    color: #333; /* Testo scuro per buona leggibilità */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Form */
+  #form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  /* Titolo */
+  #under_title {
+    font-size: 1.8em;
+    color: #00796b; /* Verde naturale per il titolo */
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Etichette e campi di input */
+  label {
+    display: block;
+    margin-bottom: 8px;
+    color: #004779;
+  }
+
+.err-message
+{
+    text-align: right;
+    position: absolute;
+    margin-left: 130px;
+    font-size: small;
+    color: crimson;
+    width: auto;
+    height: auto;
+    margin-right: 135px;
+}
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+  }
+  
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="password"]:focus {
+    border-color: #00796b;
+    outline: none;
+  }
+  
+  /* Bottone di invio */
+  #submit {
+    width: 100%;
+    padding: 10px;
+    background-color: #00796b;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1em;
+    cursor: pointer;
+  }
+  
+  #submit:hover {
+    background-color: #004d40;
+  }
+  

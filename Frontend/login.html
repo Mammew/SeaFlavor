@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="it">    
+<head>
+    <title>UNICORN PROJECT</title>
+    <link rel="stylesheet" type="text/css" href="login.css">
+</head>
+<body>
+    <form class="reg" id="form" action="../Backend/login.php" method="post"><br>
+        <h2 id="under_title">LOGIN</h2>
+        <div class="in-container">
+            <label for="email_field">Email:</label><br>
+            <input type="email" name="email_field" id="email_field" required placeholder="Email">
+            <div class="err-message" id="email_error"></div>
+        </div>         
+        
+        <div class="in-container">
+            <label for="password_field">Password:</label><br>
+            <input type="password" name="password_field" id="password_field" required placeholder="Password">
+        </div>
+
+        <div class="in-container">
+            <label for="remember_field">Remember Me</label><br>
+            <input type="checkbox" name="remember_field" id="remember_field">
+        </div>
+        <input type="submit" id="submit" name="submit" value="Sign-up">
+    </form>
+</body>
+</html>
