@@ -1,20 +1,19 @@
 <?php
-    ini_set('display_errors', false);
-    ini_set('error_log', 'php.log');
+    //ini_set('display_errors', false);
+    //ini_set('error_log', 'php.log');
 
-    if (isset($_POST["email_field"]) && isset($_POST["password_field"]) && isset($_POST["submit"])) {
+    if (isset($_POST["email"]) && isset($_POST["pass"]) && isset($_POST["submit"]) && isset($_POST["username"])) {
 
         // da cambiare le credenziali
-        $conn = new mysqli('localhost', 'root', '', 'prova_DB');
+        $conn = new mysqli('localhost', 'root', '', 'primoDB');
         if (!$conn) {
             echo "Impossible to connect to DB...";
         }
         else {
 
-            $nome = $_POST["firstname_field"];
-            $cognome = $_POST["lastname_field"];
-            $email = $_POST["email_field"];
-            $password = $_POST["password_field"];
+            $username = $_POST["username"];
+            $email = $_POST["email"];
+            $password = $_POST["pass"];
             
             if(!filter_var($email, FILTER_VALIDATE_EMAIL))
             {
@@ -26,14 +25,14 @@
             $passwd = password_hash($password, PASSWORD_DEFAULT);
 
             try {
-                $stmt = $conn->prepare("INSERT INTO user (nome,cognome,email,password) VALUE (?,?,?,?)");
+                $stmt = $conn->prepare("INSERT INTO utenti (username,email,passd) VALUE (?,?,?)");
             } catch (mysqli_sql_exception $e) {
                 error_log("Prepared failed: (" . $e . ")");
                 echo "Query error...";
                 exit();
             }
 
-            $stmt->bind_param('sss', $nome, $cognome, $email, $passwd);
+            $stmt->bind_param('sss', $username, $email, $passwd);
             try {
                 $stmt->execute();
             } catch (mysqli_sql_exception $e) {

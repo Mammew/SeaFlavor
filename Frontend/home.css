@@ -10,9 +10,14 @@
     background-color: #f0f8ff;
     color: #004d61;
     line-height: 1.6;
+    background-image:  url('images/sfonno.webp');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-size: 100% 100%;
   }
   
-  /* Header */
+  /* Header 
   header {
     background-color: #1a73e8;
     color: white;
@@ -30,8 +35,22 @@
     font-size: 20px;
     font-weight: normal;
   }
-  
-  /* Navbar */
+  */
+
+  .sticky-header {
+    top: 0;
+    margin-bottom: 10px;
+    width: 100%;
+    background-color: transparent;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.7em;
+  }
+
+  /* Navbar  seleziona navbar avente id=navbar*/
   nav#navbar {
     background-color: #004d61;
     padding: 10px;
@@ -50,12 +69,7 @@
     color: #f0f8ff;
   }
   
-  /* Form Logout */
-  form {
-    text-align: center;
-    margin: 20px 0;
-  }
-  
+  /*----------------------------*/
   form #logout {
     background-color: #1a73e8;
     color: white;
@@ -69,7 +83,21 @@
   form #logout:hover {
     background-color: #004d61;
   }
+  /*----------------------------*/
+  .services {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 20px;
+  }
   
+  .service {
+    background-color: #e0e0e0;
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    text-align: center;
+  }
+
   /* Aside */
   aside#right-side {
     background-color: #eaf6f6;

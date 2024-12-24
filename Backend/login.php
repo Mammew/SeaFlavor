@@ -3,8 +3,8 @@
     //ini_set('error_log', 'file.log');
     include "createCookie.php";
     
-    if (isset($_POST["email"]) && isset($_POST["password"]) && isset($_POST["remember_me"])) {
-        $conn = new mysqli('localhost', 'root', '', 'prova_DB');
+    if (isset($_POST["email"]) && isset($_POST["pass"]) && isset($_POST["remember_me"])) {
+        $conn = new mysqli('localhost', 'root', '', 'primoDB');
         if (!$conn) {
             echo "Impossible to connect to DB...";
         }
@@ -23,15 +23,15 @@
             header("Location: home.php");
         }
     }
-    elseif (isset($_POST["email"]) && isset($_POST["password"]) && !isset($_POST["remember_me"])) {
-        $conn = new mysqli('localhost', 'root', '', 'prova_DB');
+    elseif (isset($_POST["email"]) && isset($_POST["pass"]) && !isset($_POST["remember_me"])) {
+        $conn = new mysqli('localhost', 'root', '', 'primoDB');
         if (!$conn) {
             echo "Impossible to connect to DB...";
         }
         else {
             
             $email = $_POST["email"];
-            $password = $_POST["password"];
+            $password = $_POST["pass"];
             
             //controllo la validita della mail
             if(!filter_var($email, FILTER_VALIDATE_EMAIL))
@@ -42,7 +42,7 @@
             }
 
             try {
-                $stmt = $conn->prepare("SELECT password FROM user WHERE email = ?");
+                $stmt = $conn->prepare("SELECT passd FROM utenti WHERE email = ?");
             } catch (mysqli_sql_exception $e) {
                 error_log("Prepared failed: (" . $e . ")");
                 echo "Query error...";
@@ -66,7 +66,7 @@
                 header("Location: ../Frontend/login.html");
             }
             else{
-                $passwd_control = password_verify($password,$row["password"]);
+                $passwd_control = password_verify($password,$row["passd"]);
                 if (!$passwd_control) {
                     $conn->close();
                     echo "password mismatch...";
@@ -75,7 +75,7 @@
                 session_start();
                 $_SESSION["email"] = $_POST["email"];
                 $conn->close();
-                header("Location: home.php");
+                header("Location: ../Frontend/home.php");
             }
         }
     }
