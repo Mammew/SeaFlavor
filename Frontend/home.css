@@ -79,6 +79,28 @@
     cursor: pointer;
     transition: background-color 0.3s;
   }
+
+  /* Footer */
+  footer#footer {
+    background-color: #004d61;
+    color: white;
+    text-align: center;
+    padding: 10px 0; /* Riduci l'altezza del padding */
+    font-size: 12px; /* Riduci la dimensione del font */
+    position: fixed; /* Posiziona il footer in fondo alla pagina */
+    bottom: 0; /* Allinea il footer al fondo */
+    width: 100%; /* Assicura che il footer occupi tutta la larghezza della pagina */
+}
+
+.footer a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}/**************************************************************************/
   
   form #logout:hover {
     background-color: #004d61;
@@ -142,16 +164,7 @@
     color: #004d61;
     font-size: 16px;
   }
-  
-  /* Footer */
-  footer#footer {
-    background-color: #004d61;
-    color: white;
-    text-align: center;
-    padding: 15px 0;
-    font-size: 14px;
-  }
-  
+
   #logo{
     max-width: 150px;
     height: auto;
