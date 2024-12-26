@@ -4,7 +4,7 @@
             setcookie("rememberMe",$cookieValue,$timestamp);
             $cookieExpire = date("Y-m-d H:i:s",$timestamp);
             try {
-                $stmt = $conn->prepare("UPDATE user SET id_cookie = ?, cookie_expire = ? WHERE email = ?");
+                $stmt = $conn->prepare("UPDATE utenti SET id_cookie = ?, cookie_expire = ? WHERE email = ?");
             } catch (mysqli_sql_exception $e) {
                 error_log("Prepared failed: (" . $e . ")");
                 echo "Query error...";

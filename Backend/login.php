@@ -1,6 +1,7 @@
 <?php
     //ini_set('display_errors', false);
     //ini_set('error_log', 'file.log');
+    include "checkRememberMe.php";
     include "createCookie.php";
     
     if (isset($_POST["email"]) && isset($_POST["pass"]) && isset($_POST["remember_me"])) {
@@ -20,7 +21,11 @@
                 // se cè qualche errore ritorna all'html
                 header("Location: ../Frontend/login.html");
             }
-            header("Location: home.php");
+            
+            session_start();
+            $_SESSION["email"] = $_POST["email"];
+            $conn->close();
+            header("Location: ../Frontend/home.php");
         }
     }
     elseif (isset($_POST["email"]) && isset($_POST["pass"]) && !isset($_POST["remember_me"])) {

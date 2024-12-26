@@ -1,13 +1,14 @@
 <?php
     session_start();
-    if (!isset($_SESSION["email"])) {
+    //if (!isset($_SESSION["email"])) {
+        //echo("Sessione non attiva");
         if(isset($_COOKIE["rememberMe"])){
-            $conn = new mysqli('localhost', 'root', '', 'prova_DB');
+            $conn = new mysqli('localhost', 'root', '', 'primoDB');
             if (!$conn) {
                 echo "Impossible to connect to DB...";
             }
             try {
-                $stmt = $conn->prepare("SELECT * FROM user WHERE id_cookie = ?");
+                $stmt = $conn->prepare("SELECT * FROM utenti WHERE id_cookie = ?");
             } catch (mysqli_sql_exception $e) {
                 error_log("Prepared failed: (" . $e . ")");
                 echo "Query error...";
@@ -51,5 +52,5 @@
             session_destroy();
             header("Location: ../Frontend/login.html");
         }
-    }
+    //}
 ?>
