@@ -11,7 +11,7 @@ body {
   justify-content: center;
   align-items: center;
   /*background-color: #eaf6f6; /* Colore di sfondo simile all'oceano */
-  background-image: url('images/sfonno.webp');
+  background-image: url('../images/sfonno.webp');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;

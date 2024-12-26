@@ -1,0 +1,12 @@
+.sticky-header {
+    top: 0;
+    margin-bottom: 10px;
+    width: 100%;
+    background-color: transparent;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.7em;
+  }

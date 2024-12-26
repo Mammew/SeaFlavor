@@ -10,44 +10,11 @@
     background-color: #f0f8ff;
     color: #004d61;
     line-height: 1.6;
-    background-image:  url('images/sfonno.webp');
+    background-image:  url('../images/sfonno.webp');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     background-size: 100% 100%;
-  }
-  
-  /* Header 
-  header {
-    background-color: #1a73e8;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-  }
-  
-  header #titolo {
-    font-size: 36px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  header #paragrafi {
-    font-size: 20px;
-    font-weight: normal;
-  }
-  */
-
-  .sticky-header {
-    top: 0;
-    margin-bottom: 10px;
-    width: 100%;
-    background-color: transparent;
-    color: white;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.7em;
   }
 
   /* Navbar  seleziona navbar avente id=navbar*/
@@ -79,28 +46,6 @@
     cursor: pointer;
     transition: background-color 0.3s;
   }
-
-  /* Footer */
-  footer#footer {
-    background-color: #004d61;
-    color: white;
-    text-align: center;
-    padding: 10px 0; /* Riduci l'altezza del padding */
-    font-size: 12px; /* Riduci la dimensione del font */
-    position: fixed; /* Posiziona il footer in fondo alla pagina */
-    bottom: 0; /* Allinea il footer al fondo */
-    width: 100%; /* Assicura che il footer occupi tutta la larghezza della pagina */
-}
-
-.footer a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.footer a:hover {
-    text-decoration: underline;
-}/**************************************************************************/
   
   form #logout:hover {
     background-color: #004d61;
@@ -112,7 +57,7 @@
     padding: 40px 20px;
   }
   
-  .service {
+  .services .service {
     background-color: #e0e0e0;
     padding: 20px;
     border-radius: 10px;
@@ -120,7 +65,7 @@
     text-align: center;
   }
 
-  /* Aside */
+  /* Aside 
   aside#right-side {
     background-color: #eaf6f6;
     padding: 15px;
@@ -131,7 +76,8 @@
   aside#right-side p {
     font-size: 14px;
   }
-  
+  */
+
   /* Section */
   section#section {
     text-align: center;
@@ -149,7 +95,7 @@
     border-radius: 10px;
   }
   
-  /* Article */
+  /* Article 
   article {
     margin: 20px;
     padding: 20px;
@@ -164,6 +110,7 @@
     color: #004d61;
     font-size: 16px;
   }
+  */
 
   #logo{
     max-width: 150px;

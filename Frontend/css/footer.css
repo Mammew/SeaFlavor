@@ -1,0 +1,11 @@
+  /* Footer */
+  footer#footer {
+    background-color: #004d61;
+    color: white;
+    text-align: center;
+    padding: 10px 0; /* Riduci l'altezza del padding */
+    font-size: 12px; /* Riduci la dimensione del font */
+    position: fixed; /* Posiziona il footer in fondo alla pagina */
+    bottom: 0; /* Allinea il footer al fondo */
+    width: 100%; /* Assicura che il footer occupi tutta la larghezza della pagina */
+}
