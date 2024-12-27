@@ -1,7 +1,7 @@
 <?php
         function createCookie($email,$cookieValue,$timestamp,$conn)
         {
-            setcookie("rememberMe",$cookieValue,$timestamp);
+            setcookie("rememberMe",$cookieValue,$timestamp,"/", "", true, true);
             $cookieExpire = date("Y-m-d H:i:s",$timestamp);
             try {
                 $stmt = $conn->prepare("UPDATE utenti SET id_cookie = ?, cookie_expire = ? WHERE email = ?");

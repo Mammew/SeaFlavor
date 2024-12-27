@@ -20,10 +20,6 @@
                 // se cè qualche errore ritorna all'html
                 header("Location: ../Frontend/login.html");
             }
-            
-            session_start();
-            $_SESSION["email"] = $_POST["email"];
-            $conn->close();
             header("Location: ../Frontend/home.php");
         }
     }

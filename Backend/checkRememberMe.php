@@ -1,7 +1,5 @@
 <?php
-    session_start();
-    //if (!isset($_SESSION["email"])) {
-        //echo("Sessione non attiva");
+    if (!isset($_SESSION["email"])) {
         if(isset($_COOKIE["rememberMe"])){
             $conn = new mysqli('localhost', 'root', '', 'primoDB');
             if (!$conn) {
@@ -48,9 +46,5 @@
 
             $_SESSION["email"] = $array_result["email"];
         }
-        //else{
-        //    session_destroy();
-        //    header("Location: ../Frontend/login.html");
-        //}
-    //}
+    }
 ?>
