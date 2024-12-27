@@ -48,9 +48,9 @@
 
             $_SESSION["email"] = $array_result["email"];
         }
-        else{
-            session_destroy();
-            header("Location: ../Frontend/login.html");
-        }
+        //else{
+        //    session_destroy();
+        //    header("Location: ../Frontend/login.html");
+        //}
     //}
 ?>

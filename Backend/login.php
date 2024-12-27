@@ -1,7 +1,6 @@
 <?php
     //ini_set('display_errors', false);
     //ini_set('error_log', 'file.log');
-    include "checkRememberMe.php";
     include "createCookie.php";
     
     if (isset($_POST["email"]) && isset($_POST["pass"]) && isset($_POST["remember_me"])) {

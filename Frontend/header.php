@@ -1,3 +1,7 @@
+<?php
+    include "../Backend/checkRememberMe.php";
+?>
+
 <!DOCTYPE html>
 <html lang="it">
 <head>
