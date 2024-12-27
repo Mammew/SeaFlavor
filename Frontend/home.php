@@ -10,8 +10,8 @@
         <?php
         if (!isset($_SESSION['email'])) {
         ?>
-            <a href="login.html">Sign In </a> |
-            <a href="registration.html">Sign Up </a>
+            <a href="login.html">Accedi</a> |
+            <a href="registration.html">Registrati</a>
         <?php
         } else{
         ?>

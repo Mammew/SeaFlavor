@@ -66,6 +66,17 @@ body {
   pointer-events: none;
 }
 
+#remember_me {
+  color: #004d61; /* Colore del testo */
+  cursor: pointer;
+}
+
+.input{
+  text-align: left;
+  color: #004d61;
+  margin-bottom: 3%;
+}
+
 .input-group input:focus + label,
 .input-group input:not(:placeholder-shown) + label {
   top: -12px;
