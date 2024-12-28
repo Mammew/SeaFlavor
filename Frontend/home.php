@@ -4,8 +4,8 @@
 ?>
     <nav class="navbar" id="navbar">
         <a href="">Team </a> |
-        <a href="">Case history </a> |
-        <a href="">Contact us </a> |
+        <a href="">Chi siamo </a> |
+        <a href="prodotti.php">Prodotti </a> |
         
         <?php
         if (!isset($_SESSION['email'])) {
