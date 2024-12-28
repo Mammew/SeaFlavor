@@ -2,6 +2,8 @@
     session_start();
     include 'header.php';
 ?>
+    <br><br><br>
+    <link rel="stylesheet" type="text/css" href="css/home.css">
     <nav class="navbar" id="navbar">
         <a href="">rrr </a> |
         <a href="">fff </a> |
@@ -48,7 +50,7 @@
                 Esplora un viaggio culinario tra le ricette di pesce della Liguria, 
                 dalle preparazioni più semplici e gustose come il pesce al forno alla ligure a creazioni più elaborate che sapranno stupire i tuoi ospiti.
             </p>
-            <a href="coìucina.php">Scopri di piu </a>
+            <a href="cucina.php">Scopri di piu </a>
         </div>
     </section>
 
