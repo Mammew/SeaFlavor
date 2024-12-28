@@ -10,3 +10,8 @@
     align-items: center;
     font-size: 1.7em;
   }
+
+  #logo{
+    max-width: 150px;
+    height: auto;
+  }
