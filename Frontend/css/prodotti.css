@@ -22,6 +22,19 @@ body {
     font-size: 2.5rem;
 }
 
+.img{
+    max-width: 200px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.card-img-top {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
 /*********** pesci ***********/
 /*
 .container {

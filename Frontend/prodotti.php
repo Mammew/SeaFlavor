@@ -38,12 +38,12 @@
         ?>
         <!--<div class="col-md-4">-->
             <div class="card">
-                <!--<img src="<?php //echo $row['img']; ?>" class="card-img-top" alt="..."> -->
                 <div class="card-title">
                     <?php echo $row['nome']; ?>
                 </div>
                 <div class="card-body">
-                        <?php echo $row['descrizione']; ?>
+                    <img src="<?php echo $row['img']; ?>" class="card-img-top" alt="Foto del pesce illustrativa del pesce: <?php echo $row['nome']; ?>">
+                    <?php echo $row['descrizione']; ?>
                 </div>
             </div>
         <!--</div>-->
