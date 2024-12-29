@@ -8,19 +8,6 @@
         <a href="">rrr </a> |
         <a href="">fff </a> |
         <a href="pesca-ligure.php">Pescatori Liguri </a> |
-        
-        <?php
-        if (!isset($_SESSION['email'])) {
-        ?>
-            <a href="login.html">Accedi</a> |
-            <a href="registration.html">Registrati</a>
-        <?php
-        } else{
-        ?>
-            <a class="logout" href="../Backend/logout.php">Esci</a>
-        <?php
-        }
-        ?>
     </nav>
 
     <section class="services">

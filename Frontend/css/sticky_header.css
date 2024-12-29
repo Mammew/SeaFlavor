@@ -6,7 +6,7 @@
     color: white;
     padding: 20px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     font-size: 1.7em;
   }
@@ -14,4 +14,23 @@
   #logo{
     max-width: 150px;
     height: auto;
+  }
+
+  .container-bottoni {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .bottone {
+    color: #fff;
+    text-decoration: none;
+    font-size: medium;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 30px;
+    background: linear-gradient(145deg, #7183a4, #4f5b91);
+  }
+  
+  .bottone:hover {
+    background-color: #527999;
   }

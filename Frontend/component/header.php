@@ -17,8 +17,34 @@
     <header>
         <div class="sticky-header" >
             <img id="logo" src="images/favicon.png" alt="Logo della start up SeaFlavor">
-        <div>
             <h1> SEAFLAVOUR </h1>
-        </div>
+            <div class="container-bottoni">
+                <?php
+                    if (!isset($_SESSION['email'])) {
+                ?>
+                    <button class="bottone" id="loginButton">Login</button>
+                    <button class="bottone" id="registratiButton">Registrati</button>
+                    <script>
+                        document.getElementById("loginButton").addEventListener("click", function() {
+                            window.location.href = "login.html";
+                        });
+
+                        document.getElementById("registratiButton").addEventListener("click", function() {
+                            window.location.href = "registration.html";
+                        });
+                    </script>
+                <?php
+                    } else{
+                ?>
+                    <button class="bottone" id="logoutButton">Registrati</button>
+                    <script>
+                        document.getElementById("logoutButton").addEventListener("click", function() {
+                            window.location.href = "../Backrnd/logout.php";
+                        });
+                    </script>
+                <?php
+                    }
+                ?>
+            </div>
         
     </header>
