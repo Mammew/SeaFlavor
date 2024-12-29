@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include 'header.php';
+    include 'component/header.php';
 ?>
     <br><br><br>
     <link rel="stylesheet" type="text/css" href="css/home.css">
@@ -55,5 +55,5 @@
     </section>
 
 <?php
-    include 'footer.php';
+    include 'component/footer.php';
 ?>

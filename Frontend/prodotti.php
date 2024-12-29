@@ -1,5 +1,5 @@
 <?php
-    include 'header.php';
+    include 'component/header.php';
     $conn = new mysqli('localhost', 'root', '', 'primoDB');
     if (!$conn) {
         echo "Impossible to connect to DB...";
@@ -53,6 +53,6 @@
     </div>
     <br><br>
 <?php
-    include 'footer.php';
+    include 'component/footer.php';
 ?>
 
