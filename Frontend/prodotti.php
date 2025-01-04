@@ -32,6 +32,7 @@
     <link rel="stylesheet" type="text/css" href="css/prodotti.css">
     <h1 class="titolo">I nostri pesci</h1>
     <br><br>
+    <input type="search" id="search" placeholder="Cerca un pesce...">
     <div class="cards-container">
         <?php
             while ($row = $result->fetch_assoc()) {
@@ -52,7 +53,7 @@
         ?>
     </div>
     <br><br>
-    
+
     <script src="js/prodotti.js"></script>
 <?php
     include 'component/footer.php';
