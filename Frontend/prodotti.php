@@ -52,6 +52,8 @@
         ?>
     </div>
     <br><br>
+    
+    <script src="js/prodotti.js"></script>
 <?php
     include 'component/footer.php';
 ?>

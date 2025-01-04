@@ -36,10 +36,10 @@
                 <?php
                     } else{
                 ?>
-                    <button class="bottone" id="logoutButton">Registrati</button>
+                    <button class="bottone" id="logoutButton">Esci</button>
                     <script>
                         document.getElementById("logoutButton").addEventListener("click", function() {
-                            window.location.href = "../Backrnd/logout.php";
+                            window.location.href = "../Backend/logout.php";
                         });
                     </script>
                 <?php
