@@ -16,7 +16,9 @@
 <body>
     <header>
         <div class="sticky-header" >
-            <img id="logo" src="images/favicon.png" alt="Logo della start up SeaFlavor">
+            <a href="home.php">
+                <img id="logo" src="images/favicon.png" alt="Logo della start up SeaFlavor">
+            </a>
             <h1> SEAFLAVOUR </h1>
             <div class="container-bottoni">
                 <?php

@@ -32,7 +32,10 @@
     <link rel="stylesheet" type="text/css" href="css/prodotti.css">
     <h1 class="titolo">I nostri pesci</h1>
     <br><br>
-    <input type="search" id="search" placeholder="Cerca un pesce...">
+    <div id="search-container">
+        <input type="search" id="search" placeholder="Cerca un pesce...">
+    </div>
+    
     <div class="cards-container">
         <?php
             while ($row = $result->fetch_assoc()) {

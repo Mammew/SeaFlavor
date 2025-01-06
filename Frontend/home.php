@@ -4,6 +4,7 @@
 ?>
     <br><br><br>
     <link rel="stylesheet" type="text/css" href="css/home.css">
+    
     <nav class="navbar" id="navbar">
         <a href="">rrr </a> |
         <a href="">fff </a> |

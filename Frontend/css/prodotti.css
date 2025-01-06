@@ -67,9 +67,11 @@ body {
 
   .card{
     text-align: center;
-    border : 2px solid #000000;
+    /*border : 2px solid #000000;*/
+    border: 10px solid white;
     border-radius: 8px;
     background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombra per l'effetto sollevato */
     padding: 1rem;
     max-width: 300px;
   }
@@ -95,11 +97,7 @@ body {
   .card:hover {
     transform: translateY(-5px);
   }
-  
-  .card-body {
-    padding: 5%;
-  }
-  
+
   .card-title {
     font-size: 1.25rem;
     margin-bottom: 10px;
@@ -107,8 +105,11 @@ body {
   }
   
   .card-body {
+    padding: 5%;
+    border-radius: 4px;
     font-size: 1rem;
-    color: #333;
+    background-color: #e4e4e4;
+    color: #000000;
     margin-bottom: 20px;
   }
 /*  
@@ -127,3 +128,24 @@ body {
   .btn:hover {
     background-color: #003d51;
   }
+*/
+
+  #search-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Aggiungi un po' di spazio sopra la barra di ricerca */
+  }
+
+  #search {
+    width: 50%; /* Rendi la barra di ricerca più grande */
+    padding: 10px; /* Aggiungi padding per rendere la barra di ricerca più alta */
+    font-size: 16px; /* Aumenta la dimensione del testo */
+    border-radius: 25px; /* Rendi gli angoli della barra di ricerca tondeggianti */
+    border: 3px solid #ccc; /* Aggiungi un bordo leggero */
+    outline: none; /* Rimuovi il contorno predefinito */
+    transition: border-color 0.2s; /* Aggiungi una transizione per il colore del bordo */
+}
+
+  #search:focus {
+    border-color: #004d61; /* Cambia il colore del bordo quando la barra di ricerca è focalizzata */
+}
