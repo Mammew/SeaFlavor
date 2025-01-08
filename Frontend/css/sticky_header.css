@@ -16,21 +16,17 @@
     height: auto;
   }
 
-  .container-bottoni {
+  .auth-buttons {
     display: flex;
     gap: 10px;
   }
   
-  .bottone {
+  .auth-buttons a {
     color: #fff;
     text-decoration: none;
     font-size: medium;
     font-weight: bold;
     padding: 10px 20px;
     border-radius: 30px;
-    background: linear-gradient(145deg, #7183a4, #4f5b91);
-  }
-  
-  .bottone:hover {
-    background-color: #527999;
+    background: linear-gradient(145deg, #6e7e9b, #4f5b91);
   }

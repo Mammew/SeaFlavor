@@ -20,30 +20,17 @@
                 <img id="logo" src="images/favicon.png" alt="Logo della start up SeaFlavor">
             </a>
             <h1> SEAFLAVOUR </h1>
-            <div class="container-bottoni">
+            <div class="auth-buttons">
                 <?php
                     if (!isset($_SESSION['email'])) {
                 ?>
-                    <button class="bottone" id="loginButton">Login</button>
-                    <button class="bottone" id="registratiButton">Registrati</button>
-                    <script>
-                        document.getElementById("loginButton").addEventListener("click", function() {
-                            window.location.href = "login.html";
-                        });
-
-                        document.getElementById("registratiButton").addEventListener("click", function() {
-                            window.location.href = "registration.html";
-                        });
-                    </script>
+                    <a href="login.html">Login</a>
+                    <a href="registration.html">Registrati</a>
                 <?php
                     } else{
                 ?>
-                    <button class="bottone" id="logoutButton">Esci</button>
-                    <script>
-                        document.getElementById("logoutButton").addEventListener("click", function() {
-                            window.location.href = "../Backend/logout.php";
-                        });
-                    </script>
+                    <a href="../Frontend/logout.php">Esci</a>
+                    <a href="../Frontend/show_profile.php">Profilo</a>
                 <?php
                     }
                 ?>
