@@ -42,11 +42,11 @@
         ?>
         <!--<div class="col-md-4">-->
             <div class="card">
-                <div class="card-title">
-                    <?php echo $row['nome']; ?>
-                </div>
                 <div class="card-body">
                     <img src="<?php echo $row['img']; ?>" class="card-img-top" alt="Foto del pesce illustrativa del pesce: <?php echo $row['nome']; ?>">
+                    <div class="card-title">
+                        <?php echo $row['nome']; ?>
+                    </div>
                     <?php echo $row['descrizione']; ?>
                 </div>
             </div>
