@@ -42,8 +42,8 @@
         <!--<div class="col-md-4">-->
             <div class="card">
                 <div class="card-body">
-                    <img src="<?php echo $row['immagine']; ?>" class="card-img-top" alt="Foto del pesce illustrativa del pesce: <?php echo $row['nome']; ?>">
-                    <div class="card-title">
+                <?php echo '<img src="data:image/png;base64,' . base64_encode($row['immagine']) . '" class="card-img-top" alt="Foto del pesce illustrativa del pesce: ' . $row['nome'] . '" />'; ?>
+                <div class="card-title">
                         <?php echo $row['nome']; ?>
                     </div>
                     <?php echo $row['descrizione']; ?>
