@@ -133,7 +133,8 @@ body {
   #search-container {
     display: flex;
     justify-content: center;
-    margin-top: 20px; /* Aggiungi un po' di spazio sopra la barra di ricerca */
+    margin-top: 10px; /* Aggiungi un po' di spazio sopra la barra di ricerca */
+    margin-bottom: 50px;
   }
 
   #search {

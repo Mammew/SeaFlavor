@@ -26,7 +26,7 @@
             echo "Query fauled...";
             return false;
         }
-        echo "<script>alert('Modifica Effettuata')</script>";
+        header("Location: home.php");
     }
     else
         header("Location: home.php");

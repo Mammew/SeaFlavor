@@ -42,6 +42,7 @@
     <title>SeaFlavor</title>
     <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
+<div class="background"></div>
 <body>
     <form class="reg" id="form" action="update_profile.php" method="post">
         <h2>Modifica</h2><br>
