@@ -6,7 +6,7 @@
     }
 
     try {
-        $stmt = $conn->prepare("SELECT * FROM pesci");
+        $stmt = $conn->prepare("SELECT * FROM ricette");
     } catch (mysqli_sql_exception $e) {
         error_log("Prepared failed: (" . $e . ")");
         echo "Query error...";
@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="css/prodotti.css">
     <br><br>
     <div id="search-container">
-        <input type="search" id="search" placeholder="Cerca un pesce...">
+        <input type="search" id="search" placeholder="Cerca una ricetta...">
     </div>
     
     <div class="cards-container">
@@ -42,35 +42,20 @@
         <!--<div class="col-md-4">-->
             <div class="card">
                 <div class="card-body">
-                    <img src="<?php echo $row['immagine']; ?>" class="card-img-top" alt="Foto del pesce illustrativa del pesce: <?php echo $row['nome']; ?>">
                     <div class="card-title">
                         <?php echo $row['nome']; ?>
                     </div>
                     <?php echo $row['descrizione']; ?>
                 </div>
-                <button class="btn btn-primary add-to-cart" data-product-id="<?php echo $row['ID']; ?>">Aggiungi al carrello</button>
             </div>
         <!--</div>-->
         <?php
             }
         ?>
     </div>
-    <div id="quantity-popup" class="popup">
-        <div class="popup-content">
-            <span class="close">&times;</span>
-            <h2>Seleziona la quantità</h2>
-            <form id="quantity-form">
-                <input type="hidden" id="product-id" name="product_id">
-                <label for="quantity">Quantità:</label>
-                <input type="number" id="quantity" name="quantity" min="1" value="1">
-                <button type="submit" class="btn btn-primary">Aggiungi al carrello</button>
-            </form>
-        </div>
-    </div>
     
     <br><br>
     
-    <script src="js/prodotti.js"></script>
 <?php
     include 'component/footer.php';
 ?>

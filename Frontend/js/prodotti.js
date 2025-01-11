@@ -15,3 +15,40 @@ search.addEventListener('input', (e) => {
         }
     });
 });
+
+var back_popup = document.getElementById('quantity-popup');
+var closeBtn = document.querySelector('.popup .close'); // prendo il bottone per chiudere il popup
+var quantityForm = document.getElementById('quantity-form');
+var productIdInput = document.getElementById('product-id');
+
+document.querySelectorAll('.add-to-cart').forEach(function(button) { //seleziono tutti i bottoni con classe 'add-to-cart'
+    button.addEventListener('click', function() {
+        var productId = this.getAttribute('data-product-id'); // prendo l'ID del pesce che si vuola acquistare
+        productIdInput.value = productId;
+        back_popup.style.display = 'block';
+        console.log('valore ID::', productId);
+    });
+});
+
+/* Aggiungo l'evento click al bottone per chiudere il popup */
+closeBtn.addEventListener('click', function() {
+    back_popup.style.display = 'none';
+});
+
+/* Chiudo il popup se l'utente clicca fuori da esso */
+window.addEventListener('click', function(event) { // event listener su tutta la pagina
+    // se l'utente clicca fuori dal pupup (la var back_pupup è grande quanto la finestra è lo 'sofondo' del popup)
+    if (event.target == back_popup) {
+        back_popup.style.display = 'none';
+    }
+});
+
+// TODO: verifica validità ID prodotto
+quantityForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+    //TODO: Aggiungi qui il codice per gestire l'aggiunta al carrello
+    console.log('ID del prodotto:', productIdInput.value);
+    console.log('Quantità:', document.getElementById('quantity').value);
+    alert('Prodotto aggiunto al carrello con quantità: ' + document.getElementById('quantity').value);
+    popup.style.display = 'none';
+});

@@ -37,34 +37,39 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="it"> 
+<html lang="it">
 <head>
+    <link rel="icon" type="image/x-icon" href="images/image.png">
     <title>SeaFlavor</title>
     <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <div class="background"></div>
 <body>
-    <form class="reg" id="form" action="update_profile.php" method="post">
-        <h2>Modifica</h2><br>
+    <div class="reg">
+        <form id="form" action="update_profile.php" method="post">
+            <h2>Modifica</h2><br>
 
-        <div class="input-group">
-            <input type="text" id="firstname" name="firstname" value="<?php echo $array_result['nome']?>">
-            <label for="firstname">Nome</label>
-        </div>
+            <div class="input-group">
+                <input type="text" id="firstname" name="firstname" value="<?php echo $array_result['nome']?>">
+                <label for="firstname">Nome</label>
+            </div>
 
-        <div class="input-group">
-            <input type="text" id="lastname" name="lastname" value="<?php echo $array_result['cognome']?>">
-            <label for="lastname">Cognome</label>
-        </div>
+            <div class="input-group">
+                <input type="text" id="lastname" name="lastname" value="<?php echo $array_result['cognome']?>">
+                <label for="lastname">Cognome</label>
+            </div>
 
-        <div class="input-group">
-            <input type="email" name="email" id="email" value="<?php echo $array_result['email']?>">
-            <label for="email">Email</label>
-            <div class="err-message" id="email_error"></div>
-        </div>
+            <div class="input-group">
+                <input type="email" name="email" id="email" value="<?php echo $array_result['email']?>">
+                <label for="email">Email</label>
+                <div class="err-message" id="email_error"></div>
+            </div>
 
-        <button type="submit" id="submit" name="submit">Modifica</button>
-    </form>
+            <button type="submit" id="submit" name="submit">Modifica</button>
+        </form>
+        <br>
+        <a href="home.php">Torna alla home</a>
+    </div>
     <script src="js/registration.js"></script>
 </body>
 </html>

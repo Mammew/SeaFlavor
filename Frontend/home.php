@@ -38,7 +38,7 @@
                 Esplora un viaggio culinario tra le ricette di pesce della Liguria, 
                 dalle preparazioni più semplici e gustose come il pesce al forno alla ligure a creazioni più elaborate che sapranno stupire i tuoi ospiti.
             </p>
-            <a href="cucina.php">Scopri di piu </a>
+            <a href="ricette.php">Scopri di piu </a>
         </div>
     </section>
 
