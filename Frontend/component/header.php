@@ -19,7 +19,7 @@
             <a href="home.php">
                 <img id="logo" src="images/favicon.png" alt="Logo della start up SeaFlavor">
             </a>
-            <h1> SEAFLAVOUR </h1>
+            <h1 id="title"> SEAFLAVOUR </h1>
             <div class="auth-buttons">
                 <?php
                     if (!isset($_SESSION['email'])) {
