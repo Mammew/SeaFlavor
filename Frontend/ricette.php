@@ -43,9 +43,10 @@
             <div class="card">
                 <div class="card-body">
                     <div class="card-title">
+                        <?php echo '<img src="data:image/png;base64,' . base64_encode($row['immagine']) . '" class="card-img-top" alt="Foto illustrativa della ricetta: ' . $row['nome'] . '" />'; ?>
                         <?php echo $row['nome']; ?>
                     </div>
-                    <?php echo $row['descrizione']; ?>
+                    
                 </div>
             </div>
         <!--</div>-->
