@@ -48,7 +48,11 @@
                     </div>
                     <?php echo $row['descrizione']; ?>
                 </div>
-                <button class="btn btn-primary add-to-cart" data-product-id="<?php echo $row['ID']; ?>">Aggiungi al carrello</button>
+                <div class="quantity-container">
+                    <p id="text">Quantità(kg):</p>
+                    <input type="number" id="quantity" name="quantity" min="1" value="1"><br>
+                    <button class="btn btn-primary add-to-cart" data-product-id="<?php echo $row['ID']; ?>">Aggiungi al carrello</button>
+                </div>
             </div>
         <!--</div>-->
         <?php
@@ -58,13 +62,13 @@
     <div id="quantity-popup" class="popup">
         <div class="popup-content">
             <span class="close">&times;</span>
-            <h2>Seleziona la quantità</h2>
-            <form id="quantity-form">
+            <h3>Prodotto aggiunto al carrello correttamente</h3>
+            <!--<form id="quantity-form">
                 <input type="hidden" id="product-id" name="product_id">
                 <label for="quantity">Quantità:</label>
                 <input type="number" id="quantity" name="quantity" min="1" value="1">
                 <button type="submit" class="btn btn-primary">Aggiungi al carrello</button>
-            </form>
+            </form>-->
         </div>
     </div>
     
