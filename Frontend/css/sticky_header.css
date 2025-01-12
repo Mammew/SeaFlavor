@@ -45,5 +45,13 @@
   border-radius: 30px;
   background: linear-gradient(145deg, #6e7e9b, #4f5b91);
 }
-  
-  
+
+.icon-cart{
+  color: #000000;
+  padding-right: 10%;
+}
+
+svg{
+  width: 20px;
+  height: auto;
+}  

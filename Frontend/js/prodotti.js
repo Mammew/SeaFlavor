@@ -47,6 +47,12 @@ window.addEventListener('click', function(event) { // event listener su tutta la
     }
 });
 
+document.addEventListener('keyup', (e) => {
+    if (e.key === 'Escape') {
+        back_popup.style.display = 'none';
+    }
+});
+
 // TODO: verifica validità ID prodotto
 /*quantityForm.addEventListener('submit', function(event) {
     event.preventDefault();

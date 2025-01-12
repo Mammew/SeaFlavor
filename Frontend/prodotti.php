@@ -77,6 +77,8 @@
     <br><br>
     
     <script src="js/prodotti.js"></script>
+    <script src="js/session_cart.js"></script>
+
 <?php
     include 'component/footer.php';
 ?>
