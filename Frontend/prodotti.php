@@ -52,7 +52,7 @@
                 </div>
                 <div class="quantity-container">
                     <p id="text">Quantità(kg):</p>
-                    <input type="number" id="quantity" name="quantity" min="1" value="1"><br>
+                    <input type="number" id="quantity_<?php echo $row['ID']; ?>" name="quantity" min="1" value="1"><br>
                     <button class="btn btn-primary add-to-cart" data-product-id="<?php echo $row['ID']; ?>">Aggiungi al carrello</button>
                 </div>
             </div>

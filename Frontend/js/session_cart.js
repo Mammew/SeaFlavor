@@ -8,6 +8,8 @@ document.querySelectorAll('.add-to-cart').forEach(function(button){ //seleziono 
 })
 const addToCart = (productId) => {
     let cart = sessionStorage.getItem('cart');
+    let quantityRequired = document.getElementById('quantity_'+productId);
+    console.log('Quantity:', quantityRequired.value);
     if (cart) {
         cart = JSON.parse(cart);
     } else {
@@ -18,10 +20,10 @@ const addToCart = (productId) => {
     if(positionThisProductInCart < 0){
         cart.push({
             productId: productId,
-            quantity: 1
+            quantity: quantityRequired.value
         });
     }else{
-        cart[positionThisProductInCart].quantity = cart[positionThisProductInCart].quantity + 1;
+        cart[positionThisProductInCart].quantity = cart[positionThisProductInCart].quantity + quantityRequired;
     }
     sessionStorage.setItem('cart', JSON.stringify(cart));
     console.log('Carrello aggiornato:', cart);

@@ -19,14 +19,14 @@ search.addEventListener('input', (e) => {
 var back_popup = document.getElementById('quantity-popup');
 var closeBtn = document.querySelector('.popup .close'); // prendo il bottone per chiudere il popup
 //var quantityForm = document.getElementById('quantity-form');
-var quantityIn = document.getElementById('quantity'); // prendo il valore per la quantità
+//var quantityIn = document.getElementById('quantity'); // prendo il valore per la quantità
 //var productIdInput = document.getElementById('product-id');
 
 document.querySelectorAll('.add-to-cart').forEach(function(button) { //seleziono tutti i bottoni con classe 'add-to-cart'
     button.addEventListener('click', function() {
         var productId = this.getAttribute('data-product-id'); // prendo l'ID del pesce che si vuola acquistare
         //productIdInput.value = productId;
-        var quantity = quantityIn.value;
+        //var quantity = quantityIn.value;
         // TODO: verifica validità ID prodotto
 
         back_popup.style.display = 'block';
