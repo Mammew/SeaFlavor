@@ -45,9 +45,10 @@
                 <div class="card-body">
                 <?php echo '<img src="data:image/png;base64,' . base64_encode($row['immagine']) . '" class="card-img-top" alt="Foto del pesce illustrativa del pesce: ' . $row['nome'] . '" />'; ?>
                 <div class="card-title">
-                        <?php echo $row['nome']; ?>
-                    </div>
+                    <?php echo $row['nome']; ?>
+                </div>
                     <?php echo $row['descrizione']; ?>
+                    <p id="price"> <?php echo $row['prezzo']; ?>€/kg</p>
                 </div>
                 <div class="quantity-container">
                     <p id="text">Quantità(kg):</p>

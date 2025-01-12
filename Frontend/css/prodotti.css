@@ -112,6 +112,11 @@ body {
     color: #000000;
     margin-bottom: 20px;
   }
+
+  #price {
+    font-size: 1.5rem;
+    color: #004d61;
+  }
 /*  
   .btn {
     display: inline-block;
