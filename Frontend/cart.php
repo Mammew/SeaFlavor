@@ -52,62 +52,30 @@
     }
     echo "Totale: " . $total . "€";
     $conn->close();
-
-    /*try {
-        $stmt = $conn->prepare("SELECT * FROM pesci where ID = ?");
-    } catch (mysqli_sql_exception $e) {
-        error_log("Prepared failed: (" . $e . ")");
-        echo "Query error...";
-        exit();
-    }
-    
-    $stmt->bind_param('s', $valoreRicevuto);
-    try {
-        $stmt->execute();
-    } catch (mysqli_sql_exception $e) {
-        error_log("Query failed: (" . $e . ")");
-        echo "Query fauled...";
-        exit();
-    }
-
-    try {
-        $stmt->execute();
-    } catch (mysqli_sql_exception $e) {
-        error_log("Query failed: (" . $e . ")");
-        echo "Query fauled...";
-        exit();
-    }
-
-    $result = $stmt->get_result();
-
-    if (mysqli_stmt_errno($stmt) != 0) {
-        echo "Something went wrong...";
-        $stmt->close();
-        exit();
-    }*/
 ?>
+
 <script>
-function loadCart() {
-    var cart = sessionStorage.getItem('cart');
-    if (cart) {
-        fetch('cart.php', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded'
-            },
-            body: 'cart=' + encodeURIComponent(cart)
-        })
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('cart-content').innerHTML = data;
-        })
-        .catch(error => console.error('Errore:', error));
-    } else {
-        document.getElementById('cart-content').innerHTML = 'Il carrello è vuoto.';
-    }
-};
+    function loadCart() {
+        var cart = sessionStorage.getItem('cart');
+        if (cart) {
+            fetch('cart.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: 'cart=' + encodeURIComponent(cart)
+            })
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('cart-content').innerHTML = data;
+            })
+            .catch(error => console.error('Errore:', error));
+        } else {
+            document.getElementById('cart-content').innerHTML = 'Il carrello è vuoto.';
+        }
+    };
 </script>
+
 <?php
     include 'component/footer.php';
 ?>
-<link rel="stylesheet" type="text/css" href="css/prodotti.css">
