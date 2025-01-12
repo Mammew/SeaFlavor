@@ -1,6 +1,5 @@
 <?php
     session_start();
-    include 'component/header.php';
 ?>
 
 <?php
@@ -75,7 +74,3 @@
         }
     };
 </script>
-
-<?php
-    include 'component/footer.php';
-?>

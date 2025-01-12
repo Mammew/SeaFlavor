@@ -1,12 +1,9 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrello</title>
-    <link rel="stylesheet" href="css/prodotti.css">
-</head>
-<body>
+<?php
+    session_start();
+    include 'component/header.php';
+?>
+    <link rel="stylesheet" type="text/css" href="css/prodotti.css">
+
     <div id="cart-content">
         <!-- Il contenuto del carrello sarà qui -->
     </div>
@@ -34,5 +31,6 @@
 
         document.addEventListener('DOMContentLoaded', loadCart);
     </script>
-</body>
-</html>
+<?php
+    include 'component/footer.php';
+?>
