@@ -1,4 +1,5 @@
 <?php
+    session_start();
     include 'component/header.php';
     $conn = new mysqli('localhost', 'root', '', 'primoDB');
     if (!$conn) {
