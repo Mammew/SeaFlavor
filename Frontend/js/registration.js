@@ -6,7 +6,7 @@ mail.addEventListener("change",function checkmail(){
     let usermail = mail.value;
     let url = "../Backend/checkMail.php";
     return fetch(url,{
-        method: "post",
+        method: "post", 
         headers: {'Content-Type': 'application/x-www-form-urlencoded'},
         body: "email=" + usermail
     }).then(function(response){
