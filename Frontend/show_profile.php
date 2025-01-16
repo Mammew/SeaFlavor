@@ -68,6 +68,9 @@
             <button type="submit" id="submit" name="submit">Modifica</button>
         </form>
         <br>
+        <div class="link-container">
+            <a href="password_modify.php">Modifica password</a><br><br><br>
+        </div>
         <a href="home.php">Torna alla home</a>
     </div>
     <script src="js/registration.js"></script>

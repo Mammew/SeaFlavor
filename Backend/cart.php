@@ -1,8 +1,5 @@
 <?php
     session_start();
-?>
-
-<?php
     if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['cart'])) {
         $_SESSION['cart'] = json_decode($_POST['cart'], true);
     }
@@ -53,7 +50,7 @@
     $conn->close();
 ?>
 
-<script>
+<!--<script>
     function loadCart() {
         var cart = sessionStorage.getItem('cart');
         if (cart) {
@@ -73,4 +70,4 @@
             document.getElementById('cart-content').innerHTML = 'Il carrello è vuoto.';
         }
     };
-</script>
+</script>-->

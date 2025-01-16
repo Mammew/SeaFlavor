@@ -137,3 +137,7 @@ button {
 button:hover {
   background-color: #006d78; /* Blu leggermente più chiaro */
 }
+
+.link-container{
+  text-align: left;
+}

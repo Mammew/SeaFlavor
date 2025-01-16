@@ -12,7 +12,7 @@
         function loadCart() {
             let cart = sessionStorage.getItem('cart');
             if (cart) {
-                fetch('cart.php', {
+                fetch('../Backend/cart.php', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/x-www-form-urlencoded'
