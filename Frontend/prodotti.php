@@ -50,11 +50,17 @@
                     <?php echo $row['descrizione']; ?>
                     <p id="price"> <?php echo $row['prezzo']; ?>€/kg</p>
                 </div>
+                <?php
+                    if (isset($_SESSION['email'])) {
+                ?>
                 <div class="quantity-container">
                     <p id="text">Quantità(kg):</p>
                     <input type="number" id="quantity_<?php echo $row['ID']; ?>" name="quantity" min="1" value="1"><br>
                     <button class="btn btn-primary add-to-cart" data-product-id="<?php echo $row['ID']; ?>">Aggiungi al carrello</button>
                 </div>
+                <?php
+                    }
+                ?>
             </div>
         <!--</div>-->
         <?php
