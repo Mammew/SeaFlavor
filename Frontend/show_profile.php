@@ -47,7 +47,7 @@
 <body>
     <div class="reg">
         <form id="form" action="update_profile.php" method="post">
-            <h2>Modifica</h2><br>
+            <h2>Modifica Profilo</h2><br>
 
             <div class="input-group">
                 <input type="text" id="firstname" name="firstname" value="<?php echo $array_result['nome']?>">

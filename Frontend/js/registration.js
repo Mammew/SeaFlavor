@@ -39,6 +39,10 @@ confirmPassword.addEventListener("change",()=>{
         passwordMismatch = true;
         password_error.innerHTML="Le due password non coincidono";
     }
+    else{
+        passwordMismatch = false;
+        password_error.innerHTML = "";
+    }
 })
 
 form.addEventListener("submit", function(event){
