@@ -69,7 +69,7 @@
                 $passwd_control = password_verify($password,$row["passd"]);
                 if (!$passwd_control) {
                     $conn->close();
-                    echo "password mismatch...";
+                    header("Location: login.php");
                     exit();
                 }
                 session_start();

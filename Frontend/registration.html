@@ -10,7 +10,7 @@
 <div class="background"></div>
 <body>
     <div class="form-container">
-        <form class="form" action="registration.php" method="post">
+        <form id="form" class="form" action="registration.php" method="post">
             <h2>Registrazione</h2>
             
             <div class="input-group">
@@ -37,6 +37,7 @@
             <div class="input-group">
                 <input type="password" id="confirm" name="confirm" required>
                 <label for="confirm">Conferma Password</label>
+                <div class="err-message" id="password_error"></div>
             </div>
 
             <button type="submit" id="submit" name="submit">Registrati</button>
