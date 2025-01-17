@@ -1,7 +1,7 @@
 let cart = [];
 
 document.querySelectorAll('.add-to-cart').forEach(function(button){ //seleziono tutti i bottoni con classe 'add-to-cart'
-        button.addEventListener('click', function() {
+    button.addEventListener('click', function() {
         let productId = this.getAttribute('data-product-id');
         addToCart(productId);
     })
