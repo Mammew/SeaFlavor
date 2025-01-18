@@ -31,7 +31,10 @@
                             <div class="card-title">
                                     <?php echo $row['nome'] .": " .$quantity."kg"?> <br>
                                     <?php echo "Prezzo: " . $price_for_fish . "€"; ?>
-                                    <button class="btn btn-primary remove-from-cart" data-product-id="<?php echo $row['ID']; ?>">Rimuovi 1 Kg</button>
+                                    <div id="cart-button-container">
+                                        <button class="btn btn-primary add-from-cart" data-product-id="<?php echo $row['ID']; ?>">Aggiungi 1 Kg</button>
+                                        <button class="btn btn-primary remove-from-cart" data-product-id="<?php echo $row['ID']; ?>">Rimuovi 1 Kg</button>
+                                    </div>
                             </div>
                         </div>
                     </div>

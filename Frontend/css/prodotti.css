@@ -116,6 +116,12 @@ body {
     margin-bottom: 20px;
   }
 
+  #cart-button-container{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
   #price {
     font-size: 1.5rem;
     color: #004d61;

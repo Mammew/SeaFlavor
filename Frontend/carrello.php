@@ -29,6 +29,13 @@
                             removeFromCart(productId);
                         })
                     })
+
+                    document.querySelectorAll('.add-from-cart').forEach(function(button){ //seleziono tutti i bottoni con classe 'remove-from-cart'
+                        button.addEventListener('click', function() {
+                            let productId = this.getAttribute('data-product-id');
+                            addFromCart(productId);
+                        })
+                    })
                 })
                 .catch(error => console.error('Errore:', error));
             } else {
@@ -38,6 +45,7 @@
         }
 
         function removeFromCart (productId) {
+
             let cart = sessionStorage.getItem('cart');
             if (cart) {
                 cart = JSON.parse(cart);
@@ -55,6 +63,24 @@
                     // filtro gli item di cart e tengo item se item.productId !== productId
                     // la funz => .. ritorna true o false
                     cart = cart.filter(item => item.productId !== productId);
+                    sessionStorage.setItem('cart', JSON.stringify(cart));
+                    loadCart();
+                }
+            });
+        }
+
+        function addFromCart (productId) {
+
+            let cart = sessionStorage.getItem('cart');
+            if (cart) {
+                cart = JSON.parse(cart);
+            } else {
+                cart = [];
+            }
+
+            cart.forEach(product => {
+                if(product.productId == productId && product.quantity >= 1){
+                    product.quantity += 1;
                     sessionStorage.setItem('cart', JSON.stringify(cart));
                     loadCart();
                 }
