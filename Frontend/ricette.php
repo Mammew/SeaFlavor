@@ -30,6 +30,8 @@
     }
 ?>
     <link rel="stylesheet" type="text/css" href="css/prodotti.css">
+    <link rel="stylesheet" type="text/css" href="css/valutazione.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
     <br><br>
     <!--<div id="search-container">
         <input type="search" id="search" placeholder="Cerca una ricetta...">
@@ -45,8 +47,16 @@
                     <div class="card-title">
                         <?php echo '<img src="data:image/png;base64,' . base64_encode($row['immagine']) . '" class="card-img-top" alt="Foto illustrativa della ricetta: ' . $row['nome'] . '" />'; ?>
                         <?php echo $row['nome']; ?>
+                        <div class="rating-box">
+                            <div class="stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                        </div>
                     </div>
-                    
                 </div>
             </div>
         <!--</div>-->
@@ -54,7 +64,7 @@
             }
         ?>
     </div>
-    
+    <script src="js/valutazione.js"></script>
     <br><br>
     
 <?php
