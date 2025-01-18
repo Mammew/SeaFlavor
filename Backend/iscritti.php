@@ -14,6 +14,7 @@
         } catch (mysqli_sql_exception $e) {
             error_log("Prepared failed: (" . $e . ")");
             echo "Query error...";
+            $conn->close();
             exit();
         }
 
@@ -23,7 +24,8 @@
         } catch (mysqli_sql_exception $e) {
             error_log("Query failed: (" . $e . ")");
             echo "Query fauled...";
-            return false;
+            $stmt->close();
+            $conn->close();
         }
 
         $result = $stmt->get_result();
@@ -47,7 +49,8 @@
             } catch (mysqli_sql_exception $e) {
                 error_log("Query failed: (" . $e . ")");
                 echo "Query fauled...";
-                return false;
+                $stmt->close();
+                $conn->close();
             }
 
             // parte tutta la roba di PHPMailer

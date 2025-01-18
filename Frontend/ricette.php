@@ -11,6 +11,8 @@
     } catch (mysqli_sql_exception $e) {
         error_log("Prepared failed: (" . $e . ")");
         echo "Query error...";
+        $stmt->close();
+        $conn->close();
         exit();
     }
     
@@ -19,6 +21,8 @@
     } catch (mysqli_sql_exception $e) {
         error_log("Query failed: (" . $e . ")");
         echo "Query fauled...";
+        $stmt->close();
+        $conn->close();
         exit();
     }
 
@@ -27,8 +31,12 @@
     if (mysqli_stmt_errno($stmt) != 0) {
         echo "Something went wrong...";
         $stmt->close();
+        $conn->close();
         exit();
     }
+
+    $stmt->close();
+    $conn->close();
 ?>
     <link rel="stylesheet" type="text/css" href="css/prodotti.css">
     <link rel="stylesheet" type="text/css" href="css/valutazione.css">

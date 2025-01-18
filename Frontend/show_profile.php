@@ -19,18 +19,22 @@
         } catch (mysqli_sql_exception $e) {
             error_log("Query failed: (" . $e . ")");
             echo "Query fauled...";
+            $stmt->close();
+            $conn->close();
             exit();
         }
         $result = $stmt->get_result();
         if (mysqli_stmt_errno($stmt) != 0) {
             echo "Something went wrong...";
             $stmt->close();
+            $conn->close();
             session_destroy();
             header("Location: home.php");
             exit();
         }
         //recupero i vari campi della query
         $array_result = $result->fetch_assoc();
+        $conn->close();
     }
     else
         header("Location: home.php");

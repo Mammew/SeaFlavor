@@ -46,6 +46,7 @@
             } catch (mysqli_sql_exception $e) {
                 error_log("Prepared failed: (" . $e . ")");
                 echo "Query error...";
+                $conn->close();
                 exit();
             }
             $stmt->bind_param('s', $email);
@@ -55,6 +56,8 @@
             } catch (mysqli_sql_exception $e) {
                 error_log("Query failed: (" . $e . ")");
                 echo "Query fauled...";
+                $stmt->close();
+                $conn->close();
                 exit();
             }
 
@@ -63,17 +66,21 @@
             $row = $result->fetch_assoc();
             if ($row == null) {
                 echo "Email not present...";
+                $stmt->close();
+                $conn->close();
                 header("Location: ../Frontend/login.html");
             }
             else{
                 $passwd_control = password_verify($password,$row["passd"]);
                 if (!$passwd_control) {
+                    $stmt->close();
                     $conn->close();
                     header("Location: login.php");
                     exit();
                 }
                 session_start();
                 $_SESSION["email"] = $_POST["email"];
+                $stmt->close();
                 $conn->close();
                 header("Location: ../Frontend/home.php");
             }
