@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="css/home.css">
     
     <nav id="navbar">
-        <p>ISCRIVITI ALLA NOSTRA NEWSLETTER .... </p>
+        <p>ISCRIVITI ALLA NOSTRA <a href="newsletter.php">NEWSLETTER</a> </p>
     </nav>
 
     <section class="services">
