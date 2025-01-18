@@ -14,7 +14,7 @@ require 'utils.php';
 /*                                            */
 /* DO NOT UPLOAD TEST FILES ON SAW21!         */
 /**********************************************/
-$baseurl = "http://localhost/SAW/startSAW/SeaFlavor/Frontend";
+$baseurl = "http://localhost/SAW/startSAW/SeaFlavor/test_all";
 
 echo "[+] Testing Registration - Login - Show Profile\n";
 

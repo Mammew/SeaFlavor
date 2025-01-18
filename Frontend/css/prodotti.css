@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -9,7 +11,7 @@ body {
     background-color: #f0f8ff;
     color: #ffffff;
     line-height: 1.6;
-    background-image:  url('../images/sfonno.png');
+    background-image:  url('../images/sfondo.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -17,10 +19,10 @@ body {
     text-align: center;
 }
 
-.titolo{
+/*.titolo{
     color: #000000;
     font-size: 2.5rem;
-}
+}*/
 
 .img{
     max-width: 200px;
@@ -56,8 +58,7 @@ body {
     box-sizing: border-box;
   }
 */
-.cards-container {
-    
+.cards-container, #cart-content {
     justify-items: center;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -99,6 +100,8 @@ body {
   }
 
   .card-title {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: bold;
     font-size: 1.25rem;
     margin-bottom: 10px;
     color: #004d61;

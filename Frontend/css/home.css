@@ -1,4 +1,10 @@
 /* Generale */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+h2, h3{
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -10,7 +16,7 @@
     background-color: #f0f8ff;
     color: #004d61;
     line-height: 1.6;
-    background-image:  url('../images/sfonno.png');
+    background-image:  url('../images/sfondo.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -18,13 +24,14 @@
   }
 
   /* Navbar  seleziona navbar avente id=navbar*/
-  nav#navbar {
+  #navbar {
     background-color: #004d61;
     padding: 10px;
     text-align: center;
   }
   
-  nav#navbar a {
+  #navbar p {
+    font-family: 'Montserrat', Arial, sans-serif;
     color: white;
     text-decoration: none;
     margin: 0 15px;
@@ -32,12 +39,12 @@
     transition: color 0.3s;
   }
   
-  nav#navbar a:hover {
+  #navbar a:hover {
     color: #f0f8ff;
   }
   
   /*----------------------------*/
-  form #logout {
+  /*form #logout {
     background-color: #1a73e8;
     color: white;
     border: none;
@@ -49,7 +56,7 @@
   
   form #logout:hover {
     background-color: #004d61;
-  }
+  }*/
   /*----------------------------*/
   .services {
     display: flex;
@@ -66,54 +73,24 @@
     text-align: center;
   }
 
-  /* Aside 
-  aside#right-side {
-    background-color: #eaf6f6;
-    padding: 15px;
-    border-left: 5px solid #004d61;
-    margin: 20px;
-  }
-  
-  aside#right-side p {
-    font-size: 14px;
-  }
-  */
-
   /* Section */
-  section#section {
+  #section {
     text-align: center;
     margin: 20px;
   }
   
-  section #sottotitolo {
+  /*section #sottotitolo {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 20px;
-  }
+  }*/
   
-  section #image {
+  /*section #image {
     border: 5px solid #004d61;
     border-radius: 10px;
-  }
+  }*/
   
-  /* Article 
-  article {
-    margin: 20px;
-    padding: 20px;
-    background-color: #ffffff;
-    border: 1px solid #dadce0;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  article .paragrafi {
-    margin-bottom: 15px;
-    color: #004d61;
-    font-size: 16px;
-  }
-  */
-
-  #logo{
+  /*#logo{
     max-width: 150px;
     height: auto;
-  }
+  }*/

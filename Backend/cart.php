@@ -13,7 +13,7 @@
         $total = 0;
         foreach ($_SESSION["cart"] as $item) {
             $productId = $item['productId'];
-            $quantity = $item['quantity'];
+            $quantity = intval($item['quantity']);
 
             try {
                 $stmt = $conn->prepare("SELECT * FROM pesci WHERE ID = ?");

@@ -58,5 +58,5 @@
         }
     }
     else
-        header("Location: home.php");
+        header("Location: ../Frontend/home.php");
 ?>

@@ -19,7 +19,7 @@
             if(!filter_var($email, FILTER_VALIDATE_EMAIL))
             {
                 $conn->close();
-                header("Location: registration.html");
+                header("Location: ../Frontend/registration.html");
                 exit();
             }
 
@@ -45,18 +45,18 @@
             if (mysqli_stmt_errno($stmt) != 0) {
                 echo "Something went wrong...";
                 $stmt->close();
-                header("Location: registration.html");
+                header("Location: ../Frontend/registration.html");
                 exit();
             }
             else{
                 echo "User registered correctly";
                 $conn->close();
-                header("Location: login.html");
+                header("Location: ../Frontend/login.html");
 
             }
         }
     }
     else {
-        header("Location: registration.html");
+        header("Location: ../Frontend/registration.html");
     }
 ?>

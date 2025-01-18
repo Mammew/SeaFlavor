@@ -6,7 +6,7 @@
 
     <div id="cart-content">
         <!-- Il contenuto del carrello sarà qui -->
-    </div>
+    </div><br><br>
 
     <script>
         function loadCart() {

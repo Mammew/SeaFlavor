@@ -26,8 +26,8 @@
             echo "Query fauled...";
             return false;
         }
-        header("Location: home.php");
+        header("Location: ../Frontend/home.php");
     }
     else
-        header("Location: home.php");
+        header("Location: ../Frontend/home.php");
 ?>

@@ -31,9 +31,9 @@
 ?>
     <link rel="stylesheet" type="text/css" href="css/prodotti.css">
     <br><br>
-    <div id="search-container">
+    <!--<div id="search-container">
         <input type="search" id="search" placeholder="Cerca una ricetta...">
-    </div>
+    </div>-->
     
     <div class="cards-container">
         <?php
