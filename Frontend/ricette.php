@@ -1,4 +1,5 @@
 <?php
+    session_start();
     include 'component/header.php';
     $conn = new mysqli('localhost', 'root', '', 'primoDB');
     if (!$conn) {
@@ -47,15 +48,17 @@
                     <div class="card-title">
                         <?php echo '<img src="data:image/png;base64,' . base64_encode($row['immagine']) . '" class="card-img-top" alt="Foto illustrativa della ricetta: ' . $row['nome'] . '" />'; ?>
                         <?php echo $row['nome']; ?>
-                        <div class="rating-box">
-                            <div class="stars">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
+                        <?php if (isset($_SESSION['email'])) { ?>
+                            <div class="rating-box">
+                                <div class="stars">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
                             </div>
-                        </div>
+                        <?php } ?>
                     </div>
                 </div>
             </div>
