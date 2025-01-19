@@ -30,7 +30,7 @@
                         })
                     })
 
-                    document.querySelectorAll('.add-from-cart').forEach(function(button){ //seleziono tutti i bottoni con classe 'remove-from-cart'
+                    document.querySelectorAll('.add-from-cart').forEach(function(button){ //seleziono tutti i bottoni con classe 'add-from-cart'
                         button.addEventListener('click', function() {
                             let productId = this.getAttribute('data-product-id');
                             addFromCart(productId);
@@ -80,7 +80,7 @@
 
             cart.forEach(product => {
                 if(product.productId == productId && product.quantity >= 1){
-                    product.quantity += 1;
+                    product.quantity = parseInt(product.quantity) + 1;
                     sessionStorage.setItem('cart', JSON.stringify(cart));
                     loadCart();
                 }
