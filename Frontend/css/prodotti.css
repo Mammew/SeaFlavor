@@ -19,17 +19,13 @@ body {
     text-align: center;
 }
 
-/*.titolo{
-    color: #000000;
-    font-size: 2.5rem;
-}*/
-
 .img{
     max-width: 200px;
     height: auto;
     border-radius: 8px;
 }
 
+/*************** carte *****************/
 .card-img-top {
   max-width: 100%;
   height: auto;
@@ -37,28 +33,7 @@ body {
   margin-bottom: 15px;
 }
 
-/*********** pesci ***********/
-/*
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-
-  .row {
-    display: flex;
-    flex-wrap: wrap;
-    margin: -10px;
-  }
-  
-  .col-md-4 {
-    flex: 0 0 33.3333%;
-    flex-direction: column;
-    padding: 10px;
-    box-sizing: border-box;
-  }
-*/
-.cards-container, #cart-content {
+.cards-container, #cart-content { /*cart-content è per il carrello*/
     justify-items: center;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -68,7 +43,6 @@ body {
 
   .card{
     text-align: center;
-    /*border : 2px solid #000000;*/
     border: 10px solid white;
     border-radius: 8px;
     background-color: #ffffff;
@@ -80,21 +54,7 @@ body {
   .hide{
     display: none;
   }
- /* .card {
-    text-align: center;
-    display: grid;
-    background-color: #fff;
-    /*border: 3px solid #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.2s;
-    /*margin-bottom: 5%;
-    max-width: 300px;
-    margin: 3%;
-    height: auto;
-  }
-  */
+
   .card:hover {
     transform: translateY(-5px);
   }
@@ -116,33 +76,10 @@ body {
     margin-bottom: 20px;
   }
 
-  #cart-button-container{
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-  }
-
   #price {
     font-size: 1.5rem;
     color: #004d61;
   }
-/*  
-  .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 1rem;
-    color: #fff;
-    background-color: #004d61;
-    border: none;
-    border-radius: 4px;
-    text-decoration: none;
-    transition: background-color 0.2s;
-  }
-  
-  .btn:hover {
-    background-color: #003d51;
-  }
-*/
 
   #search-container {
     display: flex;
@@ -165,8 +102,16 @@ body {
     border-color: #004d61; /* Cambia il colore del bordo quando la barra di ricerca è focalizzata */
 }
 
+.quantity-container {
+  align-items: center;
+  justify-content: center;
+}
 
-/* stile del pop-up */
+.quantity-container p {
+  color: #004d61;
+}
+
+/********************* stile del pop-up ****************************/
 
 .popup {
   display: none; /* Nascondi il pop-up di default */
@@ -220,7 +165,7 @@ body {
   text-decoration: none;
   cursor: pointer;
 }
-
+/*
 #quantity {
   width: 25%;
   padding: 5px;
@@ -229,18 +174,42 @@ body {
   border-radius: 4px;
   text-align: center;
 }
-
-.quantity-container {
-  align-items: center;
-  justify-content: center;
-}
-
-.quantity-container p {
-  color: #004d61;
-}
+*/
 
 /*--------------stelline------------------------*/
 
 .stars i.active {
   color: #ff9c1a;
  }
+
+/*--------------Carrello------------------------*/
+
+#cart-button-container{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+#cart-total {
+  font-size: 1.5em; /* Dimensione del testo */
+  font-weight: bold;
+  color: #004d61;
+  max-height: 100px;
+  padding: 5%;
+  border: solid #004d61; 
+  border-radius: 6px;
+  text-align: center;
+  background-color: #f9f9f9; 
+}
+/*
+.cart-total {
+  display: flex;
+  background-color: #ffffff;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  padding: 10px;
+  color: #004d61;
+  border-top: 2px solid #004d61;
+  border-bottom: 2px solid #004d61;
+}*/

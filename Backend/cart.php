@@ -50,7 +50,14 @@
     } else {
         echo "Il carrello è vuoto.";
     }
-    echo "Totale: " . $total . "€";
+?>
+    <div id="cart-total">
+        <?php
+            echo "Totale: " . $total . "€";
+        ?>
+    </div>
+    
+<?php
     $conn->close();
 ?>
 

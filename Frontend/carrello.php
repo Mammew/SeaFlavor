@@ -6,7 +6,8 @@
 
     <div id="cart-content">
         <!-- Il contenuto del carrello sarà qui -->
-    </div><br><br>
+    </div>
+    <br><br>
 
     <script>
         function loadCart() {
@@ -22,7 +23,7 @@
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById('cart-content').innerHTML = data;
-                    
+
                     document.querySelectorAll('.remove-from-cart').forEach(function(button){ //seleziono tutti i bottoni con classe 'remove-from-cart'
                         button.addEventListener('click', function() {
                             let productId = this.getAttribute('data-product-id');
@@ -37,6 +38,7 @@
                         })
                     })
                 })
+
                 .catch(error => console.error('Errore:', error));
             } else {
                 document.getElementById('cart-content').innerHTML = 'Il carrello è vuoto.';
