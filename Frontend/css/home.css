@@ -49,21 +49,6 @@ h2, h3{
     text-decoration: underline;
   }
   
-  /*----------------------------*/
-  /*form #logout {
-    background-color: #1a73e8;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  form #logout:hover {
-    background-color: #004d61;
-  }*/
-  /*----------------------------*/
   .services {
     display: flex;
     justify-content: space-around;
@@ -84,19 +69,3 @@ h2, h3{
     text-align: center;
     margin: 20px;
   }
-  
-  /*section #sottotitolo {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }*/
-  
-  /*section #image {
-    border: 5px solid #004d61;
-    border-radius: 10px;
-  }*/
-  
-  /*#logo{
-    max-width: 150px;
-    height: auto;
-  }*/
