@@ -4,7 +4,7 @@
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             
-            include 'db_connection.php';
+            include '../db_connection.php';
 
             $productId = intval($_POST['productId']);
             $rating = $_POST['rating'];
@@ -27,6 +27,6 @@
         }
     }
     else {
-        header("Location: ../Frontend/login.html");
+        header("Location: ../../Frontend/login.html");
     }
 ?>
