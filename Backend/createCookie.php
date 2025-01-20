@@ -8,6 +8,7 @@
             } catch (mysqli_sql_exception $e) {
                 error_log("Prepared failed: (" . $e . ")");
                 echo "Query error...";
+                $conn->close();
                 return false;
             }
     
@@ -17,6 +18,8 @@
             } catch (mysqli_sql_exception $e) {
                 error_log("Query failed: (" . $e . ")");
                 echo "Query fauled...";
+                $stmt->close();
+                $conn->close();
                 return false;
             }
             return true;

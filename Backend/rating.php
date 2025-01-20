@@ -10,9 +10,9 @@
             $rating = $_POST['rating'];
             $email = $_SESSION["email"];
 
-            $stmt = $conn->prepare("INSERT INTO valutazioni (email, productId, rating) VALUES (?, ?, ?) ON DUPLICATE KEY UPDATE rating= ? ");
+            $stmt = $conn->prepare("INSERT INTO valutazioni (email, productId, rating) VALUES (?, ?, ?)");
 
-            $stmt->bind_param('siii', $email, $productId, $rating, $rating);
+            $stmt->bind_param('sii', $email, $productId, $rating);
             try {
                 $stmt->execute();
             } catch (mysqli_sql_exception $e) {
@@ -21,6 +21,12 @@
                 $stmt->close();
                 $conn->close();
             }
+
+            $stmt->close();
+            $conn->close();
         }
+    }
+    else {
+        header("Location: ../Frontend/login.html");
     }
 ?>

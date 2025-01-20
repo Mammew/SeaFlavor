@@ -26,7 +26,7 @@
                 Da noi trovi il loro pescato migliore, frutto di una pesca sostenibile che rispetta i ritmi della natura. 
                 E per chi ama il mare, offriamo prodotti per una pesca più responsabile.
             </p>
-            <a href="prodotti.php">Scopri di piu </a>
+            <a href="products.php">Scopri di piu </a>
         </div>
 
         <div class="service">
@@ -35,7 +35,7 @@
                 Esplora un viaggio culinario tra le ricette di pesce della Liguria, 
                 dalle preparazioni più semplici e gustose come il pesce al forno alla ligure a creazioni più elaborate che sapranno stupire i tuoi ospiti.
             </p>
-            <a href="ricette.php">Scopri di piu </a>
+            <a href="dishes.php">Scopri di piu </a>
         </div>
     </section>
 

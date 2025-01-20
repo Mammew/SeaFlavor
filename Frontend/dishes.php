@@ -40,6 +40,7 @@
     <link rel="stylesheet" type="text/css" href="css/valutazione.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
     <br><br>
+    
     <!--<div id="search-container">
         <input type="search" id="search" placeholder="Cerca una ricetta...">
     </div>-->
@@ -48,7 +49,6 @@
         <?php
             while ($row = $result->fetch_assoc()) {
         ?>
-        <!--<div class="col-md-4">-->
             <div class="card" data-product-id="<?php echo $row['ID'];?>">
                 <div class="card-body">
                     <div class="card-title">
@@ -71,12 +71,11 @@
                     </div>
                 </div>
             </div>
-        <!--</div>-->
         <?php
             }
         ?>
     </div>
-    <script src="js/valutazione.js"></script>
+    <script src="js/rating.js"></script>
     <br><br>
     
 <?php

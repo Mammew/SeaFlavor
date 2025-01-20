@@ -18,7 +18,9 @@
             header("Location: ../Frontend/registration.html");
             exit();
         }
+
         $passwd = password_hash($password, PASSWORD_DEFAULT);
+
         try {
             $stmt = $conn->prepare("INSERT INTO utenti (nome,cognome,email,passd) VALUE (?,?,?,?)");
         } catch (mysqli_sql_exception $e) {
@@ -27,6 +29,7 @@
             $conn->close();
             exit();
         }
+
         $stmt->bind_param('ssss', $nome, $cognome, $email, $passwd);
         try {
             $stmt->execute();
@@ -35,8 +38,10 @@
             echo "Query fauled...";
             $stmt->close();
             $conn->close();
+            header("Location: ../Frontend/registration.html");
             exit();
         }
+
         $result = $stmt->get_result();
         if (mysqli_stmt_errno($stmt) != 0) {
             echo "Something went wrong...";

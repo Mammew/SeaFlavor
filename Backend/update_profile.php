@@ -15,6 +15,7 @@
             echo "Query error...";
             $stmt->close();
             $conn->close();
+            header("Location: ../Frontend/show_profile.php");
             exit();
         }
 
@@ -26,12 +27,14 @@
             echo "Query fauled...";
             $stmt->close();
             $conn->close();
-            return false;
+            header("Location: ../Frontend/show_profile.php");
+            exit();
         }
+        
         $stmt->close();
         $conn->close();
         header("Location: ../Frontend/home.php");
     }
     else
-        header("Location: ../Frontend/home.php");
+        header("Location: ../Frontend/login.html");
 ?>

@@ -18,9 +18,6 @@ search.addEventListener('input', (e) => {
 
 var back_popup = document.getElementById('quantity-popup');
 var closeBtn = document.querySelector('.popup .close'); // prendo il bottone per chiudere il popup
-//var quantityForm = document.getElementById('quantity-form');
-//var quantityIn = document.getElementById('quantity'); // prendo il valore per la quantità
-//var productIdInput = document.getElementById('product-id');
 
 document.querySelectorAll('.add-to-cart').forEach(function(button) { //seleziono tutti i bottoni con classe 'add-to-cart'
     button.addEventListener('click', function() {
@@ -53,12 +50,3 @@ document.addEventListener('keyup', (e) => {
     }
 });
 
-// TODO: verifica validità ID prodotto
-/*quantityForm.addEventListener('submit', function(event) {
-    event.preventDefault();
-    //TODO: Aggiungi qui il codice per gestire l'aggiunta al carrello
-    console.log('ID del prodotto:', productIdInput.value);
-    console.log('Quantità:', document.getElementById('quantity').value);
-    alert('Prodotto aggiunto al carrello con quantità: ' + document.getElementById('quantity').value);
-    popup.style.display = 'none';
-});*/

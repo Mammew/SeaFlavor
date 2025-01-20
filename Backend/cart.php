@@ -14,34 +14,43 @@
 
             try {
                 $stmt = $conn->prepare("SELECT * FROM pesci WHERE ID = ?");
-                $stmt->bind_param('s', $productId);
+            } catch (mysqli_sql_exception $e) {
+                error_log("Prepared failed: (" . $e . ")");
+                echo "Query error...";
+                $conn->close();
+                exit();
+            }
+            $stmt->bind_param('s', $productId);
+            try {
                 $stmt->execute();
-                $result = $stmt->get_result();
-                
-                while ($row = $result->fetch_assoc()) {
-                    $price_for_fish = 0;
-                    $price_for_fish = $row['prezzo'] * $quantity;
-                    ?>
-                    <div class="card">
-                        <div class="card-body">
-                            <?php echo '<img src="data:image/png;base64,' . base64_encode($row['immagine']) . '" class="card-img-top" alt="Foto illustrativa del pesce: ' . $row['nome'] . '" />'; ?>
-                            <div class="card-title">
-                                    <?php echo $row['nome'] .": " .$quantity."kg"?> <br>
-                                    <?php echo "Prezzo: " . $price_for_fish . "€"; ?>
-                                    <div id="cart-button-container">
-                                        <button class="btn btn-primary add-from-cart" data-product-id="<?php echo $row['ID']; ?>">Aggiungi 1 Kg</button>
-                                        <button class="btn btn-primary remove-from-cart" data-product-id="<?php echo $row['ID']; ?>">Rimuovi 1 Kg</button>
-                                    </div>
-                            </div>
+            } catch (mysqli_sql_exception $e) {
+                error_log("Query failed: (" . $e . ")");
+                echo "Query fauled...";
+                $stmt->close();
+                $conn->close();
+                exit();
+            }
+            $result = $stmt->get_result();
+            
+            while ($row = $result->fetch_assoc()) {
+                $price_for_fish = 0;
+                $price_for_fish = $row['prezzo'] * $quantity;
+                ?>
+                <div class="card">
+                    <div class="card-body">
+                        <?php echo '<img src="data:image/png;base64,' . base64_encode($row['immagine']) . '" class="card-img-top" alt="Foto illustrativa del pesce: ' . $row['nome'] . '" />'; ?>
+                        <div class="card-title">
+                                <?php echo $row['nome'] .": " .$quantity."kg"?> <br>
+                                <?php echo "Prezzo: " . $price_for_fish . "€"; ?>
+                                <div id="cart-button-container">
+                                    <button class="btn btn-primary add-from-cart" data-product-id="<?php echo $row['ID']; ?>">Aggiungi 1 Kg</button>
+                                    <button class="btn btn-primary remove-from-cart" data-product-id="<?php echo $row['ID']; ?>">Rimuovi 1 Kg</button>
+                                </div>
                         </div>
                     </div>
+                </div>
 <?php
-                    $total += $price_for_fish;
-                }
-            } catch (mysqli_sql_exception $e) {
-                error_log("Query failed: (" . $e->getMessage() . ")");
-                echo "Query error...";
-                exit();
+                $total += $price_for_fish;
             }
         }
     }
@@ -58,5 +67,6 @@
     </div>
     
 <?php
+    $stmt->close();
     $conn->close();
 ?>

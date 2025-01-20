@@ -10,6 +10,7 @@
             $conn->close();
             exit();
         }
+
         try {
             $stmt = $conn->prepare("SELECT email FROM utenti WHERE email = ?");
         } catch (mysqli_sql_exception $e) {
@@ -18,6 +19,7 @@
             $conn->close();
             exit();
         }
+
         $stmt->bind_param('s', $email);
         try {
             $stmt->execute();
@@ -28,6 +30,7 @@
             $conn->close();
             exit();
         }
+        
         $result = $stmt->get_result();
         if (mysqli_stmt_errno($stmt) != 0) {
             echo "Something went wrong...";
@@ -37,6 +40,7 @@
         else{
             $row = $result->num_rows;
             echo "$row";
+            $stmt->close();
             $conn->close();
         }
     }

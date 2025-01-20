@@ -40,5 +40,5 @@
 <?php
     }
     else
-        header("Location: home.php");
+        header("Location: login.html");
 ?>

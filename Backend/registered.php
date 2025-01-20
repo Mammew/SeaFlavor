@@ -26,11 +26,13 @@
             echo "Query fauled...";
             $stmt->close();
             $conn->close();
+            exit();
         }
         $result = $stmt->get_result();
         $rows = $result->fetch_assoc();
         if ($rows["newsletter"] == 1) {
             // in teoria far apparire un alert
+            // DA GESTIRE
             echo "Sei già iscritto alla newsletter.";
         }
         else{
@@ -39,6 +41,7 @@
             } catch (mysqli_sql_exception $e) {
                 error_log("Prepared failed: (" . $e . ")");
                 echo "Query error...";
+                $conn->close();
                 exit();
             }
     
@@ -50,7 +53,9 @@
                 echo "Query fauled...";
                 $stmt->close();
                 $conn->close();
+                exit();
             }
+
             // parte tutta la roba di PHPMailer
             $mail = new PHPMailer(true);
             try {
@@ -77,6 +82,4 @@
             }
         }
     }
-    else
-        header("Location: ../Frontend/login.html");
 ?>

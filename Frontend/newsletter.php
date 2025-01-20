@@ -6,7 +6,7 @@
 </head>
 <div class="background"></div>
 <body>
-    <form class="reg" id="form" action="../Backend/iscritti.php" method="post">
+    <form class="reg" id="form" action="../Backend/registered.php" method="post">
         <h2>Newsletter</h2><br>
 
         <p>

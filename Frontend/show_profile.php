@@ -20,6 +20,7 @@
             echo "Query fauled...";
             $stmt->close();
             $conn->close();
+            header("Location: home.php");
             exit();
         }
         $result = $stmt->get_result();
@@ -36,7 +37,7 @@
         $conn->close();
     }
     else
-        header("Location: home.php");
+        header("Location: login.html");
 ?>
 
 <!DOCTYPE html>

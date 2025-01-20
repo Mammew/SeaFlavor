@@ -4,24 +4,26 @@
     include "../Backend/createCookie.php";
     
     if (isset($_POST["email"]) && isset($_POST["pass"]) && isset($_POST["remember_me"])) {
-        $conn = new mysqli('localhost', 'root', '', 'primoDB');
-        if (!$conn) {
-            echo "Impossible to connect to DB...";
+
+        include 'db_connection.php';
+
+        // crea cookie
+        function genToken(){
+            return bin2hex(random_bytes(16));
         }
-        else {
-            // crea cookie
-            function genToken(){
-                return bin2hex(random_bytes(16));
-            }
-            $email = mysqli_real_escape_string($conn, $_POST["email"]);
-            $cookieValue = genToken();
-            $timestamp = time()+60;
-            if (!createCookie($email,$cookieValue,$timestamp,$conn)) {
-                // se cè qualche errore ritorna all'html
-                header("Location: ../Frontend/login.html");
-            }
-            header("Location: ../Frontend/home.php");
+        $email = mysqli_real_escape_string($conn, $_POST["email"]);
+        $cookieValue = genToken();
+        $timestamp = time()+60;
+
+        if (!createCookie($email,$cookieValue,$timestamp,$conn)) {
+            $stmt->close();
+            $conn->close();
+            header("Location: ../Frontend/login.html");
         }
+
+        $stmt->close();
+        $conn->close();
+        header("Location: ../Frontend/home.php");
     }
     elseif (isset($_POST["email"]) && isset($_POST["pass"]) && !isset($_POST["remember_me"])) {
         
@@ -37,6 +39,7 @@
             header("Location: ../Frontend/login.html");
             exit();
         }
+
         try {
             $stmt = $conn->prepare("SELECT passd FROM utenti WHERE email = ?");
         } catch (mysqli_sql_exception $e) {
@@ -45,6 +48,7 @@
             $conn->close();
             exit();
         }
+
         $stmt->bind_param('s', $email);
         try {
             $stmt->execute();
@@ -55,6 +59,7 @@
             $conn->close();
             exit();
         }
+        
         $result = $stmt->get_result();
         
         $row = $result->fetch_assoc();

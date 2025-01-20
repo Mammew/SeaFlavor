@@ -41,6 +41,7 @@
 
             //se non ritornano righe oppure il cookie che è stato memorizzato nel database è scaduto allora salta tutto
             if ($row == 0 || strtotime($array_result["cookie_expire"]) < time()) {
+                $stmt->close();
                 $conn->close();
                 session_destroy();
                 header("Location: ../Frontend/login.html");
