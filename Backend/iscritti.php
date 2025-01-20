@@ -1,7 +1,7 @@
 <?php
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\Exception;
-    require 'vendor/autoload.php';
+    require '../vendor/autoload.php';
     
     if (isset($_POST['email']) && isset($_POST['firstname'])) {
         $conn = new mysqli('localhost', 'root', '', 'primoDB');
@@ -14,6 +14,7 @@
         } catch (mysqli_sql_exception $e) {
             error_log("Prepared failed: (" . $e . ")");
             echo "Query error...";
+            echo "ciaone";
             $conn->close();
             exit();
         }
@@ -36,10 +37,11 @@
         }
         else{
             try {
-                $stmt = $conn->prepare("INSERT INTO newsletter (email) VALUE ?");
+                $stmt = $conn->prepare("INSERT INTO newsletter (email) VALUES (?)");
             } catch (mysqli_sql_exception $e) {
                 error_log("Prepared failed: (" . $e . ")");
                 echo "Query error...";
+                echo "gay";
                 exit();
             }
     
@@ -60,13 +62,13 @@
                 $mail->isSMTP();
                 $mail->Host = 'smtp.gmail.com'; // Sostituisci con il tuo host SMTP
                 $mail->SMTPAuth = true;
-                $mail->Username = 'tuo_email@example.com'; // Sostituisci con il tuo indirizzo email
-                $mail->Password = 'tuo_password'; // Sostituisci con la tua password email
+                $mail->Username = 'seaflavour.newsletter@gmail.com'; // Sostituisci con il tuo indirizzo email
+                $mail->Password = 'oozg kern hhwx cmbm'; // Sostituisci con la tua password email
                 $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
                 $mail->Port = 587;
 
                 // Destinatari
-                $mail->setFrom('tuo_email@example.com', 'SeaFlavor-Support');
+                $mail->setFrom('seaflavour.newsletter@gmail.com', 'SeaFlavor-Support');
                 $mail->addAddress($email);
 
                 // Contenuto dell'email
