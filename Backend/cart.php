@@ -27,7 +27,7 @@
                     ?>
                     <div class="card">
                         <div class="card-body">
-                            <?php echo '<img src="data:image/png;base64,' . base64_encode($row['immagine']) . '" class="card-img-top" alt="Foto del pesce illustrativa del pesce: ' . $row['nome'] . '" />'; ?>
+                            <?php echo '<img src="data:image/png;base64,' . base64_encode($row['immagine']) . '" class="card-img-top" alt="Foto illustrativa del pesce: ' . $row['nome'] . '" />'; ?>
                             <div class="card-title">
                                     <?php echo $row['nome'] .": " .$quantity."kg"?> <br>
                                     <?php echo "Prezzo: " . $price_for_fish . "€"; ?>
@@ -47,38 +47,19 @@
                 exit();
             }
         }
-    } else {
-        echo "Il carrello è vuoto.";
     }
 ?>
     <div id="cart-total">
-        <?php
-            echo "Totale: " . $total . "€";
-        ?>
+        <div id="total-container">
+            <?php
+                echo "Totale: " . $total . "€";
+            ?>
+        </div>
+        <div id="cart-button-container">
+            <button class="btn btn-primary remove-all" >Svuota carello</button>
+        </div>
     </div>
     
 <?php
     $conn->close();
 ?>
-
-<!--<script>
-    function loadCart() {
-        var cart = sessionStorage.getItem('cart');
-        if (cart) {
-            fetch('cart.php', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded'
-                },
-                body: 'cart=' + encodeURIComponent(cart)
-            })
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('cart-content').innerHTML = data;
-            })
-            .catch(error => console.error('Errore:', error));
-        } else {
-            document.getElementById('cart-content').innerHTML = 'Il carrello è vuoto.';
-        }
-    };
-</script>-->

@@ -39,6 +39,7 @@ body {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: .50rem;
     margin-top: 1rem;
+    padding-bottom: 50px;
   }
 
   .card{
@@ -165,16 +166,7 @@ body {
   text-decoration: none;
   cursor: pointer;
 }
-/*
-#quantity {
-  width: 25%;
-  padding: 5px;
-  margin: 0 10px;
-  border: 2px solid #004d61;
-  border-radius: 4px;
-  text-align: center;
-}
-*/
+/*************************************************/
 
 /*--------------stelline------------------------*/
 
@@ -186,30 +178,33 @@ body {
 
 #cart-button-container{
   display: flex;
-  justify-content: center;
+  justify-content: left;
   gap: 10px;
+}
+
+#total{
+  width: 100%;
+  margin-bottom: 0px;
+  position: relative;
+  padding-top: 7px;
+}
+
+/*-----------------------contenitore del totale lato server------------------------*/
+#total-container{
+  padding-top: 7px;
 }
 
 #cart-total {
   font-size: 1.5em; /* Dimensione del testo */
   font-weight: bold;
   color: #004d61;
-  max-height: 100px;
-  padding: 5%;
+  margin-bottom: 0px;
   border: solid #004d61; 
   border-radius: 6px;
-  text-align: center;
+  text-align: right;
   background-color: #f9f9f9; 
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding-bottom: 10px;
 }
-/*
-.cart-total {
-  display: flex;
-  background-color: #ffffff;
-  justify-content: space-between;
-  text-align: center;
-  align-items: center;
-  padding: 10px;
-  color: #004d61;
-  border-top: 2px solid #004d61;
-  border-bottom: 2px solid #004d61;
-}*/

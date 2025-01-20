@@ -39,8 +39,14 @@ h2, h3{
     transition: color 0.3s;
   }
   
+  #navbar a {
+    font-family: 'Montserrat', Arial, sans-serif;
+    color: rgb(9, 193, 244);
+    text-decoration: none;
+  }
   #navbar a:hover {
-    color: #f0f8ff;
+    color: rgb(9, 193, 244);
+    text-decoration: underline;
   }
   
   /*----------------------------*/

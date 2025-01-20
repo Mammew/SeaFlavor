@@ -7,7 +7,9 @@
     <div id="cart-content">
         <!-- Il contenuto del carrello sarà qui -->
     </div>
-    <br><br>
+    <div id="total">
+        <!-- Il totale del carrello sarà qui -->
+    </div>
 
     <script>
         function loadCart() {
@@ -22,7 +24,9 @@
                 })
                 .then(response => response.text())
                 .then(data => {
+
                     document.getElementById('cart-content').innerHTML = data;
+                    document.getElementById('total').innerHTML = "";
 
                     document.querySelectorAll('.remove-from-cart').forEach(function(button){ //seleziono tutti i bottoni con classe 'remove-from-cart'
                         button.addEventListener('click', function() {
@@ -37,14 +41,24 @@
                             addFromCart(productId);
                         })
                     })
+
+                    const total = document.getElementById('cart-total');
+                    document.getElementById('total').appendChild(total);
+
+                    const removeAllButton = document.querySelector('.remove-all');
+                    removeAllButton.addEventListener('click', function() {
+                        sessionStorage.removeItem('cart');
+                        document.getElementById('cart-content').innerHTML = "";
+                        document.getElementById('cart-total').innerHTML = "Totale: 0€";
+                    });
+                    //const empty = document.getElementById('cart-content');
                 })
 
-                .catch(error => console.error('Errore:', error));
-            } else {
-                document.getElementById('cart-content').innerHTML = 'Il carrello è vuoto.';
+               .catch(error => console.error('Errore:', error));
             }
-            //console.log(cart);
         }
+
+        // Aggiungi event listener per il bottone "Svuota carrello"
 
         function removeFromCart (productId) {
 
