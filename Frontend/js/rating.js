@@ -8,7 +8,7 @@ cards.forEach((card) => {
             const productId = card.getAttribute('data-product-id'); // Assumi che ogni card abbia un attributo data-product-id
             console.log(productId);
             // Invia il numero di stelline al server
-            fetch('../Backend/rating.php', {
+            fetch('../Backend/rating/rating.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded'
@@ -33,5 +33,37 @@ cards.forEach((card) => {
             });
         });
     });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    fetch('../Backend/rating/average.php', {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+        data.forEach(item => {
+            const card = document.querySelector(`.card[data-product-id="${item.productId}"]`);
+            if (card) {
+                const mediaElement = card.querySelector('.media');
+                if (mediaElement) {
+                    mediaElement.textContent = `Media Valutazioni: ${item.media_valutazioni.toFixed(2)}`;
+                }
+                const stars = card.querySelectorAll('.stars i');
+                const mediaValutazioni = Math.round(item.media_valutazioni);
+                stars.forEach((star, index) => {
+                    if (index < mediaValutazioni) {
+                        star.classList.add('active');
+                    } else {
+                        star.classList.remove('active');
+                    }
+                });
+            }
+        });
+    })
+    .catch(error => console.error('Errore:', error));
 });
 
