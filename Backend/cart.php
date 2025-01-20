@@ -4,11 +4,8 @@
         $_SESSION['cart'] = json_decode($_POST['cart'], true);
     }
 
-    $conn = new mysqli('localhost', 'root', '', 'primoDB');
-    if (!$conn) {
-        echo "Impossible to connect to DB...";
-    }
-
+    include 'db_connection.php';
+    
     if (isset($_SESSION["cart"])) {
         $total = 0;
         foreach ($_SESSION["cart"] as $item) {

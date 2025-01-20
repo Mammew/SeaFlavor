@@ -6,10 +6,8 @@
     
     if (isset($_SESSION['email']) && isset($_POST['submit'])) {
         
-        $conn = new mysqli('localhost', 'root', '', 'primoDB');
-        if (!$conn) {
-            echo "Impossible to connect to DB...";
-        }
+        include 'db_connection.php';
+        
         $email = $_SESSION['email'];
         $newsletter = 1;
         try {

@@ -1,10 +1,9 @@
 <?php
     if (!isset($_SESSION["email"])) {
         if(isset($_COOKIE["rememberMe"])){
-            $conn = new mysqli('localhost', 'root', '', 'primoDB');
-            if (!$conn) {
-                echo "Impossible to connect to DB...";
-            }
+            
+            include 'db_connection.php';
+
             try {
                 $stmt = $conn->prepare("SELECT * FROM utenti WHERE id_cookie = ?");
             } catch (mysqli_sql_exception $e) {

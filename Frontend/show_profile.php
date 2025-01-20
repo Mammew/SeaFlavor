@@ -1,10 +1,9 @@
 <?php
     session_start();
     if (isset($_SESSION["email"])) {
-        $conn = new mysqli('localhost', 'root', '', 'primoDB');
-        if (!$conn) {
-            echo "Impossible to connect to DB...";
-        }
+
+        include '../Backend/db_connection.php';
+
         try {
             $stmt = $conn->prepare("SELECT nome,cognome,email FROM utenti WHERE email = ?");
         } catch (mysqli_sql_exception $e) {

@@ -4,10 +4,7 @@
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             
-            $conn = new mysqli('localhost', 'root', '', 'primoDB');
-            if (!$conn) {
-                echo "Impossible to connect to DB...";
-            }
+            include 'db_connection.php';
 
             $productId = intval($_POST['productId']);
             $rating = $_POST['rating'];

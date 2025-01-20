@@ -1,10 +1,8 @@
 <?php
     session_start();
     include 'component/header.php';
-    $conn = new mysqli('localhost', 'root', '', 'primoDB');
-    if (!$conn) {
-        echo "Impossible to connect to DB...";
-    }
+
+    include '../Backend/db_connection.php';
 
     try {
         $stmt = $conn->prepare("SELECT * FROM ricette");

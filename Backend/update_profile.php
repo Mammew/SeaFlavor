@@ -1,14 +1,12 @@
 <?php
     session_start();
     if (isset($_SESSION["email"]) && isset($_POST["submit"])) {
+        
         $new_firstname = $_POST['firstname'];
         $new_lastname = $_POST['lastname'];
         $new_email = $_POST['email'];
 
-        $conn = new mysqli('localhost', 'root', '', 'primoDB');
-        if (!$conn) {
-            echo "Impossible to connect to DB...";
-        }
+        include 'db_connection.php';
 
         try {
             $stmt = $conn->prepare("UPDATE utenti SET nome = ?,cognome = ?,email = ? WHERE email = ?");

@@ -15,7 +15,8 @@ require 'utils.php';
 /* DO NOT UPLOAD TEST FILES ON SAW21!         */
 /**********************************************/
 $baseurl = "http://localhost/SAW/startSAW/SeaFlavor/test_all";
-
+            //https://saw.dibris.unige.it/~s5564736/test_all/
+            
 echo "[+] Testing Registration - Login - Show Profile\n";
 
 echo "[*] Generating random user\n";
