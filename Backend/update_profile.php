@@ -11,7 +11,7 @@
         try {
             $stmt = $conn->prepare("UPDATE utenti SET nome = ?,cognome = ?,email = ? WHERE email = ?");
         } catch (mysqli_sql_exception $e) {
-            error_log("Prepared failed: (" . $e . ")");
+            //error_log("Prepared failed: (" . $e . ")");
             echo "Query error...";
             $stmt->close();
             $conn->close();
@@ -23,7 +23,7 @@
         try {
             $stmt->execute();
         } catch (mysqli_sql_exception $e) {
-            error_log("Query failed: (" . $e . ")");
+            //error_log("Query failed: (" . $e . ")");
             echo "Query fauled...";
             $stmt->close();
             $conn->close();

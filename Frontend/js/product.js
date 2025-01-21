@@ -27,7 +27,7 @@ document.querySelectorAll('.add-to-cart').forEach(function(button) { //seleziono
         // TODO: verifica validità ID prodotto
 
         back_popup.style.display = 'block';
-        console.log('valore ID::', productId);
+        //console.log('valore ID::', productId);
     });
 });
 

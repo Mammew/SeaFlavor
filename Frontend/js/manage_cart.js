@@ -31,20 +31,18 @@ function loadCart() {
             const total = document.getElementById('cart-total');
             document.getElementById('total').appendChild(total);
 
+            // Aggiungi event listener per il bottone "Svuota carrello"
             const removeAllButton = document.querySelector('.remove-all');
             removeAllButton.addEventListener('click', function() {
                 sessionStorage.removeItem('cart');
                 document.getElementById('cart-content').innerHTML = "";
                 document.getElementById('cart-total').innerHTML = "Totale: 0€";
             });
-            //const empty = document.getElementById('cart-content');
         })
 
        .catch(error => console.error('Errore:', error));
     }
 }
-
-// Aggiungi event listener per il bottone "Svuota carrello"
 
 function removeFromCart (productId) {
 

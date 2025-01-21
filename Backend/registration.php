@@ -1,7 +1,4 @@
 <?php
-    //ini_set('display_errors', false);
-    //ini_set('error_log', 'php.log');
-
     if (isset($_POST["firstname"]) && isset($_POST["lastname"]) && isset($_POST["email"]) && isset($_POST["pass"]) && isset($_POST["submit"])) {
 
         // da cambiare le credenziali
@@ -24,7 +21,7 @@
         try {
             $stmt = $conn->prepare("INSERT INTO utenti (nome,cognome,email,passd) VALUE (?,?,?,?)");
         } catch (mysqli_sql_exception $e) {
-            error_log("Prepared failed: (" . $e . ")");
+            //error_log("Prepared failed: (" . $e . ")");
             echo "Query error...";
             $conn->close();
             exit();
@@ -34,7 +31,7 @@
         try {
             $stmt->execute();
         } catch (mysqli_sql_exception $e) {
-            error_log("Query failed: (" . $e . ")");
+            //error_log("Query failed: (" . $e . ")");
             echo "Query fauled...";
             $stmt->close();
             $conn->close();

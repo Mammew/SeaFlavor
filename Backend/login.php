@@ -1,6 +1,4 @@
 <?php
-    //ini_set('display_errors', false);
-    //ini_set('error_log', 'file.log');
     include "../Backend/createCookie.php";
     
     if (isset($_POST["email"]) && isset($_POST["pass"]) && isset($_POST["remember_me"])) {
@@ -43,7 +41,7 @@
         try {
             $stmt = $conn->prepare("SELECT passd FROM utenti WHERE email = ?");
         } catch (mysqli_sql_exception $e) {
-            error_log("Prepared failed: (" . $e . ")");
+            //error_log("Prepared failed: (" . $e . ")");
             echo "Query error...";
             $conn->close();
             exit();
@@ -53,7 +51,7 @@
         try {
             $stmt->execute();
         } catch (mysqli_sql_exception $e) {
-            error_log("Query failed: (" . $e . ")");
+            //error_log("Query failed: (" . $e . ")");
             echo "Query fauled...";
             $stmt->close();
             $conn->close();

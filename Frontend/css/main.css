@@ -41,7 +41,7 @@ body {
 
 .form h2 {
   font-size: 24px;
-  color: #004d61; /* Blu scuro per il titolo */
+  color: #004d61;
   margin-bottom: 20px;
   font-weight: bold;
 }
@@ -55,10 +55,10 @@ body {
   width: 100%;
   padding: 10px;
   font-size: 16px;
-  border: 1px solid #b0dfe5; /* Colore del bordo */
+  border: 1px solid #b0dfe5;
   border-radius: 4px;
   outline: none;
-  background-color: #f2fcfc; /* Leggera tonalità di blu */
+  background-color: #f2fcfc;
   transition: background-color 0.3s, border-color 0.3s;
 }
 
@@ -78,7 +78,7 @@ body {
 }
 
 #remember_me {
-  color: #004d61; /* Colore del testo */
+  color: #004d61; 
   cursor: pointer;
 }
 
@@ -101,7 +101,7 @@ body {
 button {
   width: 100%;
   padding: 12px;
-  background-color: #1a73e8; /* Blu acceso per i pulsanti */
+  background-color: #1a73e8;
   color: white;
   border: none;
   border-radius: 4px;
@@ -111,7 +111,7 @@ button {
 }
 
 button:hover {
-  background-color: #155a9d; /* Blu più scuro */
+  background-color: #155a9d; 
 }
 
 .err-message {
@@ -120,22 +120,12 @@ button:hover {
   text-align: left;
 }
 
-/* Specific styles for SeaFlavour branding */
-/*.form-container::before {
-  content: 'SeaFlavour';
-  display: block;
-  font-size: 28px;
-  color: #004d61;
-  font-weight: bold;
-  margin-bottom: 20px;
-}*/
-
 button {
-  background-color: #004d61; /* Tema blu scuro marino */
+  background-color: #004d61; 
 }
 
 button:hover {
-  background-color: #006d78; /* Blu leggermente più chiaro */
+  background-color: #006d78; 
 }
 
 .link-container{

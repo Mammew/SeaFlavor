@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 stars.forEach((star, index2) => {
                     if (index1 >= index2) {
-                        // quando clicco su una stella, tutte le stelle con indice 
+                        // quando clicco su una stella, tutte le stelle con indice
                         // minore o uguale a quella cliccata diventano attive e quindi diventano colorate
                         star.classList.add("active");
                     }
@@ -47,7 +47,6 @@ document.addEventListener('DOMContentLoaded', function() {
     })
     .then(response => response.text())
     .then(data => {
-        //console.log(data);
         data = JSON.parse(data); // cosi data diventa un array di oggetti
         data.forEach(item => {
             // prendo la card avente productId uguale ad item
@@ -68,24 +67,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             }         
         });
-        /*data.forEach(item => {
-            const card = document.querySelector(`.card[data-product-id="${item.productId}"]`);
-            if (card) {
-                const mediaElement = card.querySelector('.media');
-                if (mediaElement) {
-                    mediaElement.textContent = `Media Valutazioni: ${item.media_valutazioni.toFixed(2)}`;
-                }
-                const stars = card.querySelectorAll('.stars i');
-                const mediaValutazioni = Math.round(item.media_valutazioni);
-                stars.forEach((star, index) => {
-                    if (index < mediaValutazioni) {
-                        star.classList.add('active');
-                    } else {
-                        star.classList.remove('active');
-                    }
-                });
-            }
-        });*/
     })
     .catch(error => console.error('Errore:', error));
 });

@@ -7,7 +7,7 @@
             try {
                 $stmt = $conn->prepare("SELECT * FROM utenti WHERE id_cookie = ?");
             } catch (mysqli_sql_exception $e) {
-                error_log("Prepared failed: (" . $e . ")");
+                //error_log("Prepared failed: (" . $e . ")");
                 echo "Query error...";
                 $conn->close();
                 exit();
@@ -17,7 +17,7 @@
             try {
                 $stmt->execute();
             } catch (mysqli_sql_exception $e) {
-                error_log("Query failed: (" . $e . ")");
+                //error_log("Query failed: (" . $e . ")");
                 echo "Query fauled...";
                 $stmt->close();
                 $conn->close();
